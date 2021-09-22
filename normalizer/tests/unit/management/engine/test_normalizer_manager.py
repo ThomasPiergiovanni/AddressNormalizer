@@ -71,4 +71,20 @@ class NormalizerManagerTest(TestCase):
     def test_remove_zip(self):
         self.manager.address_list = self.emulate_address_list()
         self.manager._NormalizerManager__remove_zip()
+        self.assertEqual(
+            self.manager.address_list[0]['address'],
+            '51 allée de la pépinière' 
+        )
+        self.assertEqual(
+            self.manager.address_list[3]['address'],
+            '51 allée de la pépinière  SUresnes' 
+        )
+        self.assertEqual(
+            self.manager.address_list[3]['address'],
+            '51 allée de la pépinière SUresnes' 
+        )
+        self.assertEqual(
+            self.manager.address_list[3]['address'],
+            '51 allée de la pépinièreSUresnes' 
+        )
 
