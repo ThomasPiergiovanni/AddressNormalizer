@@ -24,6 +24,32 @@ class NormalizerManagerTest(TestCase):
             ['3', '28 rue victor hugo']
         ]
         return raw_data
+    
+    @classmethod
+    def emulate_address_list(cls):
+        address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la pépinière'
+            },
+            {
+                'id': '46',
+                'address': '51 allée de la pépinière'
+            },
+            {
+                'id': '4',
+                'address': '51 allée de la pépinière 92500 SUresnes'
+            },
+            {
+                'id': '5',
+                'address': '51 allée de la pépinière 92500SUresnes'
+            },
+            {
+                'id': '6',
+                'address': '51 allée de la pépinière92500SUresnes'
+            }
+
+        ]
 
     def test_get_raw_data(self):
         csv_manager_test = CsvManagerTest()
@@ -37,6 +63,12 @@ class NormalizerManagerTest(TestCase):
     def test_set_attributes(self):
         self.manager.raw_data = self.emulate_raw_data()
         self.manager._NormalizerManager__set_attributes()
+        self.assertEqual(self.manager.address_list[0]['id'], '1')
         self.assertEqual(
-            self.manager.data[0]['id'], '1'
+            self.manager.address_list[2]['address'],
+            '51 allée de la pépinière'
         )
+    def test_remove_zip(self):
+        self.manager.address_list = self.emulate_address_list()
+        self.manager._NormalizerManager__remove_zip()
+
