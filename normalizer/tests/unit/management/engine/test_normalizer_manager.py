@@ -33,10 +33,6 @@ class NormalizerManagerTest(TestCase):
                 'address': '51 allée de la pépinière'
             },
             {
-                'id': '46',
-                'address': '51 allée de la pépinière'
-            },
-            {
                 'id': '4',
                 'address': '51 allée de la pépinière 92500 SUresnes'
             },
@@ -48,8 +44,8 @@ class NormalizerManagerTest(TestCase):
                 'id': '6',
                 'address': '51 allée de la pépinière92500SUresnes'
             }
-
         ]
+        return address_list
 
     def test_get_raw_data(self):
         csv_manager_test = CsvManagerTest()
@@ -76,11 +72,11 @@ class NormalizerManagerTest(TestCase):
             '51 allée de la pépinière' 
         )
         self.assertEqual(
-            self.manager.address_list[3]['address'],
+            self.manager.address_list[1]['address'],
             '51 allée de la pépinière  SUresnes' 
         )
         self.assertEqual(
-            self.manager.address_list[3]['address'],
+            self.manager.address_list[2]['address'],
             '51 allée de la pépinière SUresnes' 
         )
         self.assertEqual(

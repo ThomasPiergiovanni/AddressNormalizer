@@ -9,3 +9,10 @@ INPUT_FILE = 'bp_ok.csv'
 # INPUT_DIR = r'C:\02_dev\AddressNormalizer\config\data\test_data'
 TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
 TEST_INPUT_FILE = 'bp_ok.csv'
+
+ZIP_CODE_LIST = [
+    '92500',
+    '92 500',
+    '92150',
+    '92 150'
+]

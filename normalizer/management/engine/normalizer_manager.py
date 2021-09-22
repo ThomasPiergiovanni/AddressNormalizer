@@ -3,7 +3,9 @@
 import os
 from normalizer.management.clients.csv_manager import CsvManager
 
-from config.custom_settings.app_variables import INPUT_DIR, INPUT_FILE
+from config.custom_settings.app_variables import (
+    INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST
+)
 
 class NormalizerManager():
     """Normalizer manager app class
@@ -28,4 +30,11 @@ class NormalizerManager():
             if counter >= 1:
                 self.address_list.append(data)
             counter += 1
+
+    def __remove_zip(self):
+        for item in self.address_list:
+            for zip_code in ZIP_CODE_LIST:
+                addr = item['address'].replace(zip_code, '')
+                addr = addr.replace(zip_code, '')
+                item['address'] = addr
 
