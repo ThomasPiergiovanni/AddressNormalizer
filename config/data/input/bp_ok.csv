@@ -1,6 +1,7 @@
 id;adresse
 1;12 rue Ledru-Rollin
 2;65 rue des Bas Rogers
+46;51 allée de la pépinière
 3;28 rue victor hugo
 4;39 AVENUE GEORGES POMPIDOU
 5;74 Boulevard Henri Sellier
@@ -12,43 +13,42 @@ id;adresse
 11;32 rue des cottages
 12;
 13;33 rue Jules Ferry
-14;28 place Jean Jaur�s
+14;28 place Jean Jaurès
 15;15 rue Worth
 16;21 rue gardenat lapostol
 17;13 rue Chevreul
 18;25 Avenue Georges Pompidou
 19;16 rue Berthelot
 20;149 Boulevard Henri Sellier
-21;3 All�e des Mouettes
+21;3 Allée des Mouettes
 22;20 bis rue ledru Rollin
 23;33 rue Roger Salengro
 24;14 rue Claude Burgod
 25;11 rue Gambetta
 26;17 rue de la cerisaie
 27;4 rue Georges Appay
-28;3 rue Louis Ren� NOUGIER
+28;3 rue Louis René NOUGIER
 29;4 b rue du calvaire
 30;27 ter rue de Verdun
 31;57 rue Jean-Jacques Rousseau
 32;57 rue Jean-Jacques Rousseau
 33;rue Edouard Nieuport
-34;5 All�e Edgar Fournier
+34;5 Allée Edgar Fournier
 35;61 Rue Fernand Forest
-36;116 rue carnot, b�t. C
+36;116 rue carnot, bât. C
 37;12 rue de l'hippodrome
 38;9 boulevard Aristide Briand
 39;9 boulevard Aristide Briand
 40;14 bis rue du ratrait
-41;31 rue Beno�t Malon
+41;31 rue Benoît Malon
 42;14 avenue de la Belle Gabrielle
-43;7 rue Honor� d'Estienne d'Orves
+43;7 rue Honoré d'Estienne d'Orves
 44;3 AVENUE JUSTIN GODART
 45;7 rue de Saint Cloud
-46;51 all�e de la p�pini�re
-47;18 boulevard Aristide Briand - b�t. M
-48;1 all�e Jacques Offenbach
+47;18 boulevard Aristide Briand - bât. M
+48;1 allée Jacques Offenbach
 49;14 bis rue des Bartoux
-50;36 rue du Docteur �mile Roux
+50;36 rue du Docteur Émile Roux
 51;16 rue Kellog
 52;69 rue des bas rogers
 53;1 avenue justin godart
@@ -57,96 +57,96 @@ id;adresse
 56;41 rue du docteur Magnan
 57;3 promenade de l'abbaye
 58;34 rue pasteur
-59;27 route des fusill�s de la R�sistance
-60;11 ter rue de la libert�
+59;27 route des fusillés de la Résistance
+60;11 ter rue de la liberté
 61;9 boulevard Aristide Briand
 62;62 rue des moulineaux
-63;15 avenue Jean Jaur�s
+63;15 avenue Jean Jaurès
 64;24 rue Carnot
 65;42 rue Merlin de Thionville
 66;33 rue Roger Salengro
-67;23 avenue Jean Jaur�s
-68;54 all�e santos dumont
-69;6 bis rue de la Libert�
-70;6 bis rue de la Libert�
+67;23 avenue Jean Jaurès
+68;54 allée santos dumont
+69;6 bis rue de la Liberté
+70;6 bis rue de la Liberté
 71;10 place Henri IV
 72;27 rue Albert Caron
 73;33 rue du docteur Magnan
-74;35 avenue Jean Jaur�s
-75;132 boulevard du mar�chal De Lattre de Tassigny
+74;35 avenue Jean Jaurès
+75;132 boulevard du maréchal De Lattre de Tassigny
 76;71 rue Albert Caron
 77;63 rue Jean-Jacques Rousseau
 78;1 avenue Sisley
 79;44 RUE CLUSERET
 80;26 BIS RUE DES PUITS
-81;20 rue de S�vres
-82;5 all�e des primev�res
+81;20 rue de Sèvres
+82;5 allée des primevères
 83;5 rue Jean Mace
 84;20 rue de la poterie
-85;45 rue des Carri�res
+85;45 rue des Carrières
 86;18 avenue Edouard Vaillant
 87;17 rue du ratrait
 88;2 rue Robert Joyeux
 89;NSP
-90;4 all�e Camille Saint-Saens
+90;4 allée Camille Saint-Saens
 91;15 B rue Emile Duclaux
-92;10 avenue du mar�chal juin
+92;10 avenue du maréchal juin
 93;46 avenue Franklin Roosevelt
 94;149 BOULEVARD HENRI SELLIER
-95;9 place du g�n�ral Leclerc
+95;9 place du général Leclerc
 96;24 rue des Vignes
-97;17 rue du Commandant Rivi�re
+97;17 rue du Commandant Rivière
 98;2 avenue de la criolla
-99;9bis quai L�on Blum
+99;9bis quai Léon Blum
 100;16 rue Gabriel Philippe
 101;10 rue Ledru Rollin
-102;37 all�e de la p�pini�re
+102;37 allée de la pépinière
 103;3 rue Jacques Decour
 104;16 Bis rue du Ratrait
 105;70 rue carnot
 106;8 rue HUBERT CHARPENTIER
-107;58 avenue des landes, b�t. A
+107;58 avenue des landes, bât. A
 108;72 rue Pasteur
 109;1 rue Diderot
 110;55 rue Gardenat Lapostol
-111;12 rue de la libert�
+111;12 rue de la liberté
 112;11 impasse des vignerons
 113;9 boulevard Aristide Briand
-114;14 all�e des Mimosas
-115;15 All�e Santos Dumont
+114;14 allée des Mimosas
+115;15 Allée Santos Dumont
 116;4 rue Jacques Decour
-117;18 rue de s�vres
+117;18 rue de sèvres
 118;26 bis rue paul bert
 119;27 bis rue Albert Caron
 120;12 chemin des roses
 121;56 rue des Couvaloux
 122;57 rue Jean-Jacques Rousseau
 123;10 rue de la poterie
-124;64 rue des Ch�nes
+124;64 rue des Chênes
 125;6 avenue Alexandre Maistrasse
-126;12 rue Pag�s
+126;12 rue Pagès
 127;146 rue Gambetta
 128;9 rue Jacques Decour
-129;9 chemin de la libert�
+129;9 chemin de la liberté
 130;93 rue Rouget de Lisle
 131;65 avenue des Bas Rogers
-132;all�e santos dumont
+132;allée santos dumont
 133;40 rue des Parigots
 134;6 avenue Sisley
-135;44 avenue Jean Jaur�s
-136;13 avenue de l'abb� Saint Pierre
+135;44 avenue Jean Jaurès
+136;13 avenue de l'abbé Saint Pierre
 137;7 avenue Sisley
-138;1 all�e Santos Dumont
+138;1 allée Santos Dumont
 139;28 rue du pas saint-maurice
 140;56 rue Danton
 141;22 RUE DE LA POTERIE
 142;160 rue Gambetta
 143;4 bis rue du calvaire
 144;69 rue des bas rogers
-145;5 all�e Louis Chevrolet
-146;5 rue du F�cheray
+145;5 allée Louis Chevrolet
+146;5 rue du Fécheray
 147;27 rue Pierre Dupont
-148;18 rue de s�vres
+148;18 rue de sèvres
 149;32 rue jean-jacques rousseau
 150;1 Bis rue Guillaume Lenoir
 151;4 avenue Gustave Stresemann
@@ -154,36 +154,36 @@ id;adresse
 153;48 rue des cherchevets
 154;55 ter Bd Henri Sellier
 155;41 rue Jean-Jacques Rousseau
-156;4 rue du professeur Louis-Ren� Nougier
+156;4 rue du professeur Louis-René Nougier
 157;32 rue des Acquevilles
-158;6 bis all�e Edgar Fournier
+158;6 bis allée Edgar Fournier
 159;62 rue Georges Appay
 160;7 domaine des hocquettes
 161;6 avenue Justin Godart
 162;33 rue pierrre dupont
 163;25 Avenue Georges Pompidou
 164;46 rue Pasteur
-165;4 rue de la libert�
-166;39 rue des carri�res
-167;8 all�e des violettes
+165;4 rue de la liberté
+166;39 rue des carrières
+167;8 allée des violettes
 168;47 rue des bartoux
 169;45 rue du chemin vert
-170;10 Quai L�on Blum
+170;10 Quai Léon Blum
 171;40 rue des Parigots
 172;46 rue Georges Appay
-173;5 rue Fran�ois Bougault
-174;101 rue des ch�nes
+173;5 rue François Bougault
+174;101 rue des chênes
 175;71 rue Albert Caron
-176;15 all�e Santos Dumont
+176;15 allée Santos Dumont
 177;5 boulevard Aristide Briand Ecsalier J
 178;17 rue de Verdun
 179;8 rue du Bac
 180;19 avenue Edouard Vaillant
-181;6 all�e des platanes
+181;6 allée des platanes
 182;3 ALLEE DES BERGERONNETTES
-183;16 rue des Carri�res
-184;9 rue du Commandant Rivi�re
-185;3 all�e du 8 mai 1945
+183;16 rue des Carrières
+184;9 rue du Commandant Rivière
+185;3 allée du 8 mai 1945
 186;24 rue de l'hippodrome
 187;45 rue des bourets
 188;56 rue des bons raisins
@@ -193,9 +193,9 @@ id;adresse
 192;115 rue GAMBETTA
 193;47 rue des Bartoux
 194;5 avenue georges pompidou
-195;3 all�e Santos-Dumont
+195;3 allée Santos-Dumont
 196;11 Domaine des Hocquettes
-197;2 all�e des orangers
+197;2 allée des orangers
 198;1 domaines des hocquettes
 199;12 rue Kellogg
 200;11 rue des bons raisins
@@ -205,45 +205,45 @@ id;adresse
 204;9 boulevard Aristide Briand
 205;37 rue des Parigots
 206;69 bvd henri Sellier
-207;7 bis rue Jean Mac�
+207;7 bis rue Jean Macé
 208;97 rue pasteur
 209;48 rue jean-jacques rousseau
-210;122 rue de la R�publique
+210;122 rue de la République
 211;13 rue Beausejour
 212;33 rue des Parigots
 213;4 rue des Parigots
 214;94 rue Paul Bert
 215;39 rue des moulineaux
-216;5 all�e des rives de Bagatelle
+216;5 allée des rives de Bagatelle
 217;24 rue Ledru-Rollin
 218;15 rue Benoit Malon
 219;75 rue rouget de Lisle
-220;7 rue Honor� d'Estienne d'Orves
+220;7 rue Honoré d'Estienne d'Orves
 221;43 Chemin du Syndicat des Cultivateurs
 222;21 rue Georges Appay
-223;1 all�e Charles Gounod
+223;1 allée Charles Gounod
 224;65 avenue des Bas Rogers
 225;NSP
 226;11 avenue Sisley
 227;105 Rue De Verdun
 228;56 rue Danton
 229;12 rue Artheme Genteur
-230;94 rue des Ch�nes
-231;2 all�e des orangers, villa des Acquevilles
-232;53 b boulevard du mar�chal De Lattre de Tassigny
+230;94 rue des Chênes
+231;2 allée des orangers, villa des Acquevilles
+232;53 b boulevard du maréchal De Lattre de Tassigny
 233;71 boulevard du Marechal de Lattre de Tassigny
 234;51 rue Paul Bert
 235;39 rue du docteur Magnan
 236;37 rue Jacques Decour
 237;23 rue Roger Salengro
-238;64 rue des Ch�nes
+238;64 rue des Chênes
 239;76 rue Rouget de Lisle
 240;60 rue des bons raisins
 241;29 bis rue Emile Duclaux
-242;all�e des pinsons
+242;allée des pinsons
 243;33 rue des Acquevilles
 244;21 rue Maurice Payret Dortail
-245;8 all�e Louis Chevrolet
+245;8 allée Louis Chevrolet
 246;24 Rue Garibaldi
 247;7 chemin du syndicat des cultivateurs
 248;2 rue Locarno
@@ -256,16 +256,16 @@ id;adresse
 255;5 avenue Edouard Vaillant
 256;21 rue Carnot
 257;3 rue des Velettes
-258;132 boulevard du mar�chal De Lattre de Tassigny
+258;132 boulevard du maréchal De Lattre de Tassigny
 259;97 rue pasteur
 260;23 av jean jaures
 261;23 rue Raymond Cosson
-262;5 all�e des rives de Bagatelle
-263;2 rue du Mont Val�rien
+262;5 allée des rives de Bagatelle
+263;2 rue du Mont Valérien
 264;14 RUE ARTHEME GENTEUR
-265;47 avenue Jean Jaur�s
-266;91 rue des ch�nes
-267;33 all�e des tilleuls
+265;47 avenue Jean Jaurès
+266;91 rue des chênes
+267;33 allée des tilleuls
 268;22 rue Victor Hugo
 269;83 rue de Verdun
 270;12 rue Emilien Colin
@@ -275,76 +275,76 @@ id;adresse
 274;24 Rue Emilien Colin
 275;9 boulevard Aristide Briand
 276;4 avenue Justin Godart
-277;7 all�e Louis Chevrolet
+277;7 allée Louis Chevrolet
 278;24 rue Carnot
-279;1 all�e des rives de Bagatelle
+279;1 allée des rives de Bagatelle
 280;1 avenue Justin Godart
-281;7 rue Emile Duclaux, b�t. A, log.22
+281;7 rue Emile Duclaux, bât. A, log.22
 282;10-12 rue Etienne Dolet
 283;7 rue du clos des ermites
 284;6 rue Gabriel Philippe
 285;10 Bis rue de Bellevue
-286;3 all�e des Lilas
+286;3 allée des Lilas
 287;8 Bis rue Michelet
 288;10 Rue Rouget De Lisle
 289;24 Rue Emilien Colin
 290;17 rue Perronet
 291;17 rue du ratrait
 292;10 rue de la cerisaie
-293;6 rue Louis-Ren� Nougier
+293;6 rue Louis-René Nougier
 294;26 rue de la cerisaie
-295;6 rue Louis-Ren� Nougier
-296;2 all�e des violettes
+295;6 rue Louis-René Nougier
+296;2 allée des violettes
 297;73 Avenue Des Bas Rogers
 298;8 rue des velettes
 299;9 boulevard Aristide Briand
-300;25 all�e des tilleuls
+300;25 allée des tilleuls
 301;11 rue de Verdun
 302;2 RUE FLORENT DANCOURT
-303;3 bis rue Beaus�jour
+303;3 bis rue Beauséjour
 304;4 ter rue Diderot
-305;10 rue de la libert�
-306;17 all�e Santos Dumont
+305;10 rue de la liberté
+306;17 allée Santos Dumont
 307;2 square de la Concorde
 308;4 bis rue du calvaire
 309;22 Rue de la Poterie
 310;13 rue Raymond Cosson
 311;
-312;2 place du g�n�ral Leclerc
-313;2 rue Honor� d'Estienne d'Orves
+312;2 place du général Leclerc
+313;2 rue Honoré d'Estienne d'Orves
 314;124 bis rue Carnot
 315;NSP
 316;44 rue Carnot
-317;9 all�e Santos Dumont
+317;9 allée Santos Dumont
 318;14 rue G. Appay
 319;7 RUE PAUL BERT
 320;7 RUE PAUL BERT
 321;39 Av Georges Pompidou
 322;33 rue Jean-Jacques Rousseau
 323;3 avenue Georges Pompidou
-324;40 rue de la R�publique
+324;40 rue de la République
 325;44 RUE DU FECHERAY
 326;4 bis rue du calvaire
-327;9 ter all�e des Marronniers
+327;9 ter allée des Marronniers
 328;56 bis rue du Val d'Or
 329;80 rue des cherchevets
 330;21 rue de Saint-Cloud
 331;6 rue Gabriel Philippe
 332;37 bis rue Voltaire
 333;4 rue Georges Appay
-334;44 avenue Jean Jaur�s
+334;44 avenue Jean Jaurès
 335;17 rue Emile Duclaux
-336;6 promenade saint Leufroy appt N�19
+336;6 promenade saint Leufroy appt N°19
 337;4 rue Claude Burgod
 338;147 boulevard Henri sellier
 339;35 Rue Jean Jacques Rousseau
-340;7 bis rue Jean Mac�
-341;15 place du G�n�ral Leclerc
-342;10 avenue du mar�chal juin
+340;7 bis rue Jean Macé
+341;15 place du Général Leclerc
+342;10 avenue du maréchal juin
 343;60 rue voltaire
 344;2 RUE FLORENT DANCOURT
 345;26 rue du pas saint maurice
-346;5 all�e Georges Bizet
+346;5 allée Georges Bizet
 347;NSP
 348;1 Rue des Cottages
 349;17 rue des tourneroches
@@ -352,8 +352,8 @@ id;adresse
 351;22 RUE DE LA POTERIE
 352;25 Avenue Georges Pompidou
 353;43 rue des Parigots
-354;37 rue de la R�publique
-355;6 avenue du mar�chal JUIN
+354;37 rue de la République
+355;6 avenue du maréchal JUIN
 356;27 ter rue Benoit Malon
 357;promenade Saint Leufroy
 358;19 rue de verdun
@@ -361,64 +361,64 @@ id;adresse
 360;21 rue Albert Caron
 361;43 rue cluseret
 362;1 place de la halle, appartement 67
-363;10 avenue du mar�chal Juin
+363;10 avenue du maréchal Juin
 364;13 rue victor hugo
-365;20 all�e des jonquilles
+365;20 allée des jonquilles
 366;9 rue Gabriel philippe
-367;6 all�e des maraichers
+367;6 allée des maraichers
 368;39 Rue Des Meuniers
 369;42 rue roger salengro
 370;19 rue Albert Caron
-371;142 boulevard du Mar�chal de Lattre de Tassigny
-372;39 route des fusill�s de la R�sistance
+371;142 boulevard du Maréchal de Lattre de Tassigny
+372;39 route des fusillés de la Résistance
 373;3 rue Chevreul
 374;3 Rue Raymond Cosson, Appt 84
 375;NSP
 376;9 rue carnot
-377;108 rue de la R�publique
+377;108 rue de la République
 378;7 rue Curie
 379;19 rue Albert Caron
 380;13 avenue Georges Pompidou
-381;1 all�e des bouchons
+381;1 allée des bouchons
 382;11 bis rue des Cottages
 383;NSP
 384;19 rue gardenat lapostol
-385;12 place du g�n�ral Leclerc
-386;93 rue de la R�publique
-387;57 route des fusill�s de la R�sistance
+385;12 place du général Leclerc
+386;93 rue de la République
+387;57 route des fusillés de la Résistance
 388;15 rue de Verdun
 389;1 square des Tourterelles
 390;41 route des fusilles de la resistance
 391;1 avenue sisley
 392;
-393;2 rue des Ch�vremonts
-394;6 all�e des maraichers
+393;2 rue des Chèvremonts
+394;6 allée des maraichers
 395;23 rue Roger Salengro
 396;8 rue des Acquevilles
-397;116 Boulevard Mar�chal de Lattre de Tassigny
+397;116 Boulevard Maréchal de Lattre de Tassigny
 398;4 rue Etienne Dolet
 399;126 rue carnot
-400;10 rue de la libert�
+400;10 rue de la liberté
 401;16 avenue Georges Pompidou
-402;1 all�e des platanes
+402;1 allée des platanes
 403;30 rue Carnot
 404;25 rue Jacques Decour
 405;33 rue Jules Ferry
 406;19 avenue de la belle Gabrielle
 407;51 rue Gardenat Lapostol
-408;9 all�e de Longchamp
+408;9 allée de Longchamp
 409;10-12 rue Etienne Dolet
 410;27 rue Pierre Dupont
-411;82 Rue de la Libert�
+411;82 Rue de la Liberté
 412;24 rue des Vignes
 413;114 rue Carnot
 414;8 Bis rue Michelet
-415;52 avenue Jean Jaur�s
-416;11 all�e Santos Dumont
+415;52 avenue Jean Jaurès
+416;11 allée Santos Dumont
 417;9 boulevard Aristide Briand
-418;33 rue de la R�publique
+418;33 rue de la République
 419;54 rue des bons raisins
-420;99 rue des ch�nes
+420;99 rue des chênes
 421;36 rue Jean-Jacques Rousseau
 422;15 rue Benoit Malon
 423;3 boulevard Aristide Briand
