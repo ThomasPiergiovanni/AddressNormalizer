@@ -11,6 +11,16 @@ class CsvManagerTest(TestCase):
     def setUp(self):
         self.manager = CsvManager()
     
+    @classmethod
+    def emulate_imported_data(cls):
+        cls.imported_data = [
+            'id;adresse',
+            '1;12 rue Ledru-Rollin',
+            '2;65 rue des Bas Rogers',
+            '3;28 rue victor hugo',
+            '4;39 AVENUE GEORGES POMPIDOU'
+        ]
+    
     def test_import_data_with_source_file(self):
         self.manager.import_data()
         self.assertEqual (self.manager.imported_data[1][0], '1')

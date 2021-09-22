@@ -11,7 +11,6 @@ class CsvManager:
         self.input_folder = INPUT_DIR
         self.input_file = INPUT_FILE
         self.imported_data = []
-        self.features_class = []
 
     def import_data(self):
         data_file = os.path.join(self.input_folder, self.input_file)
