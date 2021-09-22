@@ -85,6 +85,19 @@ class NormalizerManagerTest(TestCase):
             '51 allée de la pépinièreSUresnes' 
         )
     
+    def test_remove_unwanted_characters(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51, allée de la pépinière!'
+            }
+        ]
+        self.manager._NormalizerManager__remove_unwanted_characters()
+        self.assertEqual(
+            self.manager.address_list[0]['address'],
+            '51 allée de la pépinière' 
+        )
+    
     def test_lower_string(self):
         self.manager.address_list = self.emulate_address_list()
         self.manager._NormalizerManager__lower_string()

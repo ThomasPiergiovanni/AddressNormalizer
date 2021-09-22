@@ -1,11 +1,14 @@
 """Normalizer manager app module.
 """
 import os
-from normalizer.management.clients.csv_manager import CsvManager
+
+from re import split, sub
 
 from config.custom_settings.app_variables import (
     INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST
 )
+from normalizer.management.clients.csv_manager import CsvManager
+
 
 class NormalizerManager():
     """Normalizer manager app class
@@ -37,6 +40,15 @@ class NormalizerManager():
                 addr = item['address']
                 addr = addr.replace(zip_code, '')
                 item['address'] = addr
+    
+    def __remove_unwanted_characters(self):
+        for item in self.address_list:
+            addr = item['address']
+            addr = addr.strip(" ,.'?!")
+            addr = sub("[,.?!()]", " ", addr)
+            while "  " in addr:
+                addr = addr.replace("  ", " ")
+            item['address'] = addr
     
     def __lower_string(self):
         for item in self.address_list:
