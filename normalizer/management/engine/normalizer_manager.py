@@ -34,7 +34,14 @@ class NormalizerManager():
     def __remove_zip(self):
         for item in self.address_list:
             for zip_code in ZIP_CODE_LIST:
-                addr = item['address'].replace(zip_code, '')
+                addr = item['address']
                 addr = addr.replace(zip_code, '')
                 item['address'] = addr
+    
+    def __lower_string(self):
+        for item in self.address_list:
+                addr = item['address']
+                addr = addr.lower()
+                item['address'] = addr
+
 
