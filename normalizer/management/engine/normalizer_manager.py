@@ -87,5 +87,38 @@ class NormalizerManager():
             while "  " in addr:
                 addr = addr.replace("  ", " ")
             item['address'] = addr
-        
+
+    def __set_address_components(self):
+        for item in self.address_list:
+            addr = item['address']
+            comp_list = split(" ", addr)
+            list_len = len(comp_list)
+            counter = 1
+            print(comp_list)
+            for component in comp_list:
+                if counter == 1:
+                    item['comp_1'] = component
+                    counter += 1
+                elif counter == 2:
+                    item['comp_2'] = component
+                    counter += 1
+                elif counter == 3:
+                    item['comp_3'] = component
+                    counter += 1
+                elif counter == 4:
+                    item['comp_4'] = component
+                    counter += 1
+                elif counter == 5:
+                    item['comp_5'] = component
+                    counter += 1
+                elif counter == 6:
+                    item['comp_6'] = component
+                    counter += 1
+                elif counter == 7:
+                    item['comp_7'] = component
+                    counter += 1
+                elif counter == 8:
+                    item['comp_8'] = component
+                    counter += 1
+
 
