@@ -15,4 +15,9 @@ class NormalizerManager():
         csv_manager = CsvManager()
         csv_manager.import_data(INPUT_DIR, INPUT_FILE)
         self.raw_data = csv_manager.imported_data
+    
+    def __set_attributes(self):
+        counter = 0
+        for raw in self.raw_data:
+            for item in raw:
 
