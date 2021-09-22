@@ -16,3 +16,9 @@ ZIP_CODE_LIST = [
     '92150',
     '92 150'
 ]
+
+CITY_NAME_LIST = [
+    'suresnes',
+    'paris',
+    'rueil-malamaison'
+]

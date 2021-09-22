@@ -89,13 +89,13 @@ class NormalizerManagerTest(TestCase):
         self.manager.address_list = [
             {
                 'id': '1',
-                'address': '51, allée de la pépinière!'
+                'address': '51, allée! de la pépinière'
             }
         ]
         self.manager._NormalizerManager__remove_unwanted_characters()
         self.assertEqual(
             self.manager.address_list[0]['address'],
-            '51 allée de la pépinière' 
+            '51  allée  de la pépinière' 
         )
     
     def test_lower_string(self):
@@ -111,4 +111,38 @@ class NormalizerManagerTest(TestCase):
         self.assertEqual(
             self.manager.address_list[0]['address'],
             '51 allee de la pepiniere' 
+        )
+    
+    def test_remove_city_name(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la pépinière 92500 suresnes'
+            }
+        ]
+        self.manager._NormalizerManager__remove_city_name()
+        self.assertEqual(
+            self.manager.address_list[0]['address'],
+            '51 allée de la pépinière 92500 ' 
+        )
+    
+    def test_strip_and_trim(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la  pépinière 92500 suresnes !'
+            },
+            {
+                'id': '2',
+                'address': ' 51 allée     de la  pépinière 92500 suresnes!'
+            }
+        ]
+        self.manager._NormalizerManager__strip_and_trim()
+        self.assertEqual(
+            self.manager.address_list[0]['address'],
+            '51 allée de la pépinière 92500 suresnes' 
+        )
+        self.assertEqual(
+            self.manager.address_list[1]['address'],
+            '51 allée de la pépinière 92500 suresnes' 
         )

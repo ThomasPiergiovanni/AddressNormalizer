@@ -5,7 +5,7 @@ import os
 from re import split, sub
 
 from config.custom_settings.app_variables import (
-    INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST
+    INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST, CITY_NAME_LIST
 )
 from normalizer.management.clients.csv_manager import CsvManager
 
@@ -16,7 +16,6 @@ class NormalizerManager():
     def __init__(self):
         self.raw_data = None
         self.address_list = []
-
 
     def __get_raw_data(self):
         csv_manager = CsvManager()
@@ -44,10 +43,7 @@ class NormalizerManager():
     def __remove_unwanted_characters(self):
         for item in self.address_list:
             addr = item['address']
-            addr = addr.strip(" ,.'?!")
             addr = sub("[,.?!()]", " ", addr)
-            while "  " in addr:
-                addr = addr.replace("  ", " ")
             item['address'] = addr
     
     def __lower_string(self):
@@ -58,22 +54,38 @@ class NormalizerManager():
 
     def __remove_accent(self):
         for item in self.address_list:
-            string = item['address']
-            string = string.replace("é","e")
-            string = string.replace("ë","e")
-            string = string.replace("ê","e")
-            string = string.replace("è","e")
-            string = string.replace("ì","i")
-            string = string.replace("î","i")
-            string = string.replace("ï","i")
-            string = string.replace("à","a")
-            string = string.replace("â","a")
-            string = string.replace("â","a")
-            string = string.replace("ù","u")
-            string = string.replace("û","u")
-            string = string.replace("ü","u")
-            string = string.replace("ô","o")
-            string = string.replace("ö","o")
-            string = string.replace("ò","o")
-            item['address'] = string
+            addr = item['address']
+            addr = addr.replace("é","e")
+            addr = addr.replace("ë","e")
+            addr = addr.replace("ê","e")
+            addr = addr.replace("è","e")
+            addr = addr.replace("ì","i")
+            addr = addr.replace("î","i")
+            addr = addr.replace("ï","i")
+            addr = addr.replace("à","a")
+            addr = addr.replace("â","a")
+            addr = addr.replace("â","a")
+            addr = addr.replace("ù","u")
+            addr = addr.replace("û","u")
+            addr = addr.replace("ü","u")
+            addr = addr.replace("ô","o")
+            addr = addr.replace("ö","o")
+            addr = addr.replace("ò","o")
+            item['address'] = addr
+
+    def __remove_city_name(self):
+        for item in self.address_list:
+            for city_name in CITY_NAME_LIST:
+                addr = item['address']
+                addr = addr.replace(city_name, '')
+                item['address'] = addr
+
+    def __strip_and_trim(self):
+        for item in self.address_list:
+            addr = item['address']
+            addr = addr.strip(" ,.'?!")
+            while "  " in addr:
+                addr = addr.replace("  ", " ")
+            item['address'] = addr
+        
 
