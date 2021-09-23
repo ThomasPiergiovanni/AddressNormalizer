@@ -212,3 +212,41 @@ class NormalizerManagerTest(TestCase):
         )
         self.assertEqual(method_output['comp_2'], 'avenue')
     
+    def test__upper_components_address_list(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la pépinière 92500 suresnes',
+                'comp_1': '51',
+                'comp_2': 'avenue',
+                'comp_3': 'de',
+                'comp_4': 'la',
+                'comp_5': 'pépinière',
+                'comp_6': '92500',
+                'comp_7': 'suresnes'
+            }
+        ]
+        self.manager._upper_components_address_list()
+        self.assertEqual(self.manager.address_list[0]['comp_1'], '51')
+        self.assertEqual(self.manager.address_list[0]['comp_2'], 'AVENUE')
+
+    def test_upper_component(self):
+        item = {
+            'id': '1',
+            'address': '51 allée de la pépinière 92500 suresnes',
+            'comp_1': '51',
+            'comp_2': 'av',
+            'comp_3': 'de',
+            'comp_4': 'la',
+            'comp_5': 'pépinière',
+            'comp_6': '92500',
+            'comp_7': 'suresnes'
+        }
+        component = item['comp_2']
+        component_name = 'comp_2'
+        method_output = self.manager._NormalizerManager__upper_component(
+            item, component, component_name
+        )
+        self.assertEqual(method_output['comp_2'], 'AV')
+
+

@@ -156,11 +156,34 @@ class NormalizerManager():
         return prefix_list
 
     def __loop_prefix_dict(self, item, component, component_name, prefix_list):
-            if component:
-                for prefix in prefix_list:
-                    if component in prefix['incomformities']:
-                        item[component_name] = prefix['correct_name']
-            return item
+        if component:
+            for prefix in prefix_list:
+                if component in prefix['incomformities']:
+                    item[component_name] = prefix['correct_name']
+        return item
+    
+    def _upper_components_address_list(self):
+        for item in self.address_list:
+            comp_1 = item.get('comp_1', None)
+            item = self.__upper_component(item, comp_1, 'comp_1')
+            comp_2 = item.get('comp_2', None)
+            item = self.__upper_component(item, comp_2, 'comp_2')
+            comp_3 = item.get('comp_3', None)
+            item = self.__upper_component(item, comp_3, 'comp_3')
+            comp_4 = item.get('comp_4', None)
+            item = self.__upper_component(item, comp_4, 'comp_4')
+            comp_5 = item.get('comp_5', None)
+            item = self.__upper_component(item, comp_5, 'comp_5')
+            comp_6 = item.get('comp_6', None)
+            item = self.__upper_component(item, comp_6, 'comp_6')
+            comp_7 = item.get('comp_7', None)
+            item = self.__upper_component(item, comp_7, 'comp_7')
+            comp_8 = item.get('comp_8', None)
+            item = self.__upper_component(item, comp_8, 'comp_8') 
 
-
+    def __upper_component(self, item, component, component_name):
+        if component:
+            res = component.upper()
+            item[component_name] = res
+        return item
 
