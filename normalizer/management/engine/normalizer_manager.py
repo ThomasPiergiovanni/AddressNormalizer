@@ -120,4 +120,7 @@ class NormalizerManager():
                     item['comp_8'] = component
                     counter += 1
 
+    def remove_incorrect_prefix(self):
+        for item in self.address_list:
+            addr = item['address']
 
