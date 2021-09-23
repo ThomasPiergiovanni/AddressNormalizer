@@ -5,7 +5,11 @@ import os
 from re import split, sub
 
 from config.custom_settings.app_variables import (
-    INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST, CITY_NAME_LIST
+    INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST, CITY_NAME_LIST,
+    ALLEE_WORDS, AVENUE_WORDS, BOULEVARD_WORDS, CHEMIN_WORDS,
+    COURS_WORDS, IMPASSE_WORDS, PASSAGE_WORDS, PLACE_WORDS,
+    PROMENADE_WORDS, QUAI_WORDS, ROUTE_WORDS, RUE_WORDS,
+    SENTE_WORDS
 )
 from normalizer.management.clients.csv_manager import CsvManager
 
@@ -120,7 +124,43 @@ class NormalizerManager():
                     item['comp_8'] = component
                     counter += 1
 
-    def remove_incorrect_prefix(self):
+    def __remove_incorrect_prefix(self):
+        prefix_list = self.__set_prefix_list()
         for item in self.address_list:
-            addr = item['address']
+            comp_1 = item.get('comp_1', None)
+            item = self.__loop_prefix_dict(item, comp_1, 'comp_1',prefix_list)
+            comp_2 = item.get('comp_2', None)
+            item = self.__loop_prefix_dict(item, comp_2, 'comp_2',prefix_list)
+            comp_3 = item.get('comp_3', None)
+            item = self.__loop_prefix_dict(item, comp_3, 'comp_3',prefix_list)
+            comp_4 = item.get('comp_4', None)
+            item = self.__loop_prefix_dict(item, comp_4, 'comp_4',prefix_list)
+            comp_5 = item.get('comp_5', None)
+            item = self.__loop_prefix_dict(item, comp_5, 'comp_5',prefix_list)
+            comp_6 = item.get('comp_6', None)
+            item = self.__loop_prefix_dict(item, comp_6, 'comp_6',prefix_list)
+            comp_7 = item.get('comp_7', None)
+            item = self.__loop_prefix_dict(item, comp_7, 'comp_7',prefix_list)
+            comp_8 = item.get('comp_8', None)
+            item = self.__loop_prefix_dict(item, comp_8, 'comp_8',prefix_list)   
+
+    def __set_prefix_list(self):
+        """
+        """
+        prefix_list = [
+            ALLEE_WORDS, AVENUE_WORDS, BOULEVARD_WORDS, CHEMIN_WORDS,
+            COURS_WORDS, IMPASSE_WORDS, PASSAGE_WORDS, PLACE_WORDS,
+            PROMENADE_WORDS, QUAI_WORDS, ROUTE_WORDS, RUE_WORDS,
+            SENTE_WORDS
+        ]
+        return prefix_list
+
+    def __loop_prefix_dict(self, item, component, component_name, prefix_list):
+            if component:
+                for prefix in prefix_list:
+                    if component in prefix['incomformities']:
+                        item[component_name] = prefix['correct_name']
+            return item
+
+
 

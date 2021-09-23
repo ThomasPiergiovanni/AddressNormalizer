@@ -180,4 +180,35 @@ class NormalizerManagerTest(TestCase):
         ]
         self.manager._NormalizerManager__remove_incorrect_prefix()
         self.assertEqual(self.manager.address_list[0]['comp_1'], '51')
-        self.assertEqual(self.manager.address_list[0]['comp_2'], 'allee')
+        self.assertEqual(self.manager.address_list[0]['comp_2'], 'avenue')
+    
+
+    def test_loop_prefix(self):
+        item = {
+            'id': '1',
+            'address': '51 allée de la pépinière 92500 suresnes',
+            'comp_1': '51',
+            'comp_2': 'av',
+            'comp_3': 'de',
+            'comp_4': 'la',
+            'comp_5': 'pépinière',
+            'comp_6': '92500',
+            'comp_7': 'suresnes'
+        }
+        component = item['comp_2']
+        component_name = 'comp_2'
+        perfix_list = [
+            {
+                'correct_name': "allee",
+                'incomformities': ["ALL", "All", "all"]
+            },
+            {
+                'correct_name': "avenue",
+                'incomformities': ["AV", "Av", "av"]
+            }
+        ]
+        method_output = self.manager._NormalizerManager__loop_prefix_dict(
+            item, component, component_name, perfix_list
+        )
+        self.assertEqual(method_output['comp_2'], 'avenue')
+    
