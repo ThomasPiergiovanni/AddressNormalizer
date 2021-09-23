@@ -2,7 +2,9 @@
 """
 from django.test import TestCase
 
-from config.custom_settings.app_variables import TEST_INPUT_DIR, TEST_INPUT_FILE
+from config.custom_settings.app_variables import (
+    TEST_INPUT_DIR, TEST_INPUT_FILE, TEST_REF_FILE
+)
 from normalizer.management.clients.csv_manager import CsvManager
 
 
@@ -23,8 +25,28 @@ class CsvManagerTest(TestCase):
         ]
     
     def test_import_data_with_source_file(self):
-        self.manager.import_data(TEST_INPUT_DIR, TEST_INPUT_FILE)
-        self.assertEqual (self.manager.imported_data[1][0], '1')
-        self.assertEqual (
+        self.manager.import_data(
+            TEST_INPUT_DIR,
+            TEST_INPUT_FILE,
+            ';',
+            None
+        )
+        self.assertEqual(self.manager.imported_data[1][0], '1')
+        self.assertEqual(
             self.manager.imported_data[2][1], '65 rue des Bas Rogers'
+        )
+
+    def test_import_data_with_ref_file(self):
+        self.manager.import_data(
+            TEST_INPUT_DIR,
+            TEST_REF_FILE,
+            ';',
+            '"'
+        )
+        self.assertEqual(self.manager.imported_data[1][0], 'lieu')
+        self.assertEqual(
+            self.manager.imported_data[2][2], '5'
+        )
+        self.assertEqual(
+            self.manager.imported_data[2][1], ''
         )

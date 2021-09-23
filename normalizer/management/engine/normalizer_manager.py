@@ -23,7 +23,7 @@ class NormalizerManager():
 
     def _get_raw_data(self):
         csv_manager = CsvManager()
-        csv_manager.import_data(INPUT_DIR, INPUT_FILE)
+        csv_manager.import_data(INPUT_DIR, INPUT_FILE, ";", None)
         self.raw_data = csv_manager.imported_data
     
     def _set_attributes(self):

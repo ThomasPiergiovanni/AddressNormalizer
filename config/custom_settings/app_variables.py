@@ -10,6 +10,7 @@ INPUT_FILE = 'bp_ok.csv'
 TEST_INPUT_DIR = r'C:\02_dev\AddressNormalizer\config\data\test_data'
 # TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
 TEST_INPUT_FILE = 'bp_ok.csv'
+TEST_REF_FILE = 'adresse.csv'
 
 ZIP_CODE_LIST = [
     '92500',
