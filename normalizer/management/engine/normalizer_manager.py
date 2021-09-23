@@ -21,12 +21,12 @@ class NormalizerManager():
         self.raw_data = None
         self.address_list = []
 
-    def __get_raw_data(self):
+    def _get_raw_data(self):
         csv_manager = CsvManager()
         csv_manager.import_data(INPUT_DIR, INPUT_FILE)
         self.raw_data = csv_manager.imported_data
     
-    def __set_attributes(self):
+    def _set_attributes(self):
         counter = 0
         for raw in self.raw_data:
             data = {
@@ -37,26 +37,26 @@ class NormalizerManager():
                 self.address_list.append(data)
             counter += 1
 
-    def __remove_zip(self):
+    def _remove_zip(self):
         for item in self.address_list:
             for zip_code in ZIP_CODE_LIST:
                 addr = item['address']
                 addr = addr.replace(zip_code, '')
                 item['address'] = addr
     
-    def __remove_unwanted_characters(self):
+    def _remove_unwanted_characters(self):
         for item in self.address_list:
             addr = item['address']
             addr = sub("[,.?!()]", " ", addr)
             item['address'] = addr
     
-    def __lower_string(self):
+    def _lower_string(self):
         for item in self.address_list:
             addr = item['address']
             addr = addr.lower()
             item['address'] = addr
 
-    def __remove_accent(self):
+    def _remove_accent(self):
         for item in self.address_list:
             addr = item['address']
             addr = addr.replace("é","e")
@@ -77,14 +77,14 @@ class NormalizerManager():
             addr = addr.replace("ò","o")
             item['address'] = addr
 
-    def __remove_city_name(self):
+    def _remove_city_name(self):
         for item in self.address_list:
             for city_name in CITY_NAME_LIST:
                 addr = item['address']
                 addr = addr.replace(city_name, '')
                 item['address'] = addr
 
-    def __strip_and_trim(self):
+    def _strip_and_trim(self):
         for item in self.address_list:
             addr = item['address']
             addr = addr.strip(" ,.'?!")
@@ -92,7 +92,7 @@ class NormalizerManager():
                 addr = addr.replace("  ", " ")
             item['address'] = addr
 
-    def __set_address_components(self):
+    def _set_address_components(self):
         for item in self.address_list:
             addr = item['address']
             comp_list = split(" ", addr)

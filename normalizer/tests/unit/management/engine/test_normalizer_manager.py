@@ -50,7 +50,7 @@ class NormalizerManagerTest(TestCase):
     def test_get_raw_data(self):
         csv_manager_test = CsvManagerTest()
         csv_manager_test.emulate_imported_data()
-        self.manager._NormalizerManager__get_raw_data()
+        self.manager._get_raw_data()
         self.assertEqual(
             self.manager.raw_data[2],
             csv_manager_test.imported_data[2]
@@ -58,7 +58,7 @@ class NormalizerManagerTest(TestCase):
     
     def test_set_attributes(self):
         self.manager.raw_data = self.emulate_raw_data()
-        self.manager._NormalizerManager__set_attributes()
+        self.manager._set_attributes()
         self.assertEqual(self.manager.address_list[0]['id'], '1')
         self.assertEqual(
             self.manager.address_list[2]['address'],
@@ -67,7 +67,7 @@ class NormalizerManagerTest(TestCase):
 
     def test_remove_zip(self):
         self.manager.address_list = self.emulate_address_list()
-        self.manager._NormalizerManager__remove_zip()
+        self.manager._remove_zip()
         self.assertEqual(
             self.manager.address_list[0]['address'],
             '51 allée de la pépinière' 
@@ -92,7 +92,7 @@ class NormalizerManagerTest(TestCase):
                 'address': '51, allée! de la pépinière'
             }
         ]
-        self.manager._NormalizerManager__remove_unwanted_characters()
+        self.manager._remove_unwanted_characters()
         self.assertEqual(
             self.manager.address_list[0]['address'],
             '51  allée  de la pépinière' 
@@ -100,7 +100,7 @@ class NormalizerManagerTest(TestCase):
     
     def test_lower_string(self):
         self.manager.address_list = self.emulate_address_list()
-        self.manager._NormalizerManager__lower_string()
+        self.manager._lower_string()
         self.assertEqual(
             self.manager.address_list[1]['address'],
             '51 allée de la pépinière 92500 suresnes' 
@@ -108,7 +108,7 @@ class NormalizerManagerTest(TestCase):
 
     def test_remove_accent(self):
         self.manager.address_list = self.emulate_address_list()
-        self.manager._NormalizerManager__remove_accent()
+        self.manager._remove_accent()
         self.assertEqual(
             self.manager.address_list[0]['address'],
             '51 allee de la pepiniere' 
@@ -121,12 +121,11 @@ class NormalizerManagerTest(TestCase):
                 'address': '51 allée de la pépinière 92500 suresnes'
             }
         ]
-        self.manager._NormalizerManager__remove_city_name()
+        self.manager._remove_city_name()
         self.assertEqual(
             self.manager.address_list[0]['address'],
             '51 allée de la pépinière 92500 ' 
         )
-
 
     def test_strip_and_trim(self):
         self.manager.address_list = [
@@ -139,7 +138,7 @@ class NormalizerManagerTest(TestCase):
                 'address': ' 51 allée     de la  pépinière 92500 suresnes!'
             }
         ]
-        self.manager._NormalizerManager__strip_and_trim()
+        self.manager._strip_and_trim()
         self.assertEqual(
             self.manager.address_list[0]['address'],
             '51 allée de la pépinière 92500 suresnes' 
@@ -155,7 +154,7 @@ class NormalizerManagerTest(TestCase):
                 'address': '51 allée de la pépinière 92500 suresnes'
             }
         ]
-        self.manager._NormalizerManager__set_address_components()
+        self.manager._set_address_components()
         self.assertEqual(self.manager.address_list[0]['comp_1'], '51')
         self.assertEqual(self.manager.address_list[0]['comp_2'], 'allée')
         self.assertEqual(self.manager.address_list[0]['comp_3'], 'de')
