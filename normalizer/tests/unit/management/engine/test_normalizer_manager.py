@@ -248,7 +248,6 @@ class NormalizerManagerTest(TestCase):
         )
         self.assertEqual(method_output['comp_2'], 'AV')
 
-
     def test_create_new_address(self):
         self.manager.address_list = [
             {
