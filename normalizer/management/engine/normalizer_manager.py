@@ -94,7 +94,6 @@ class NormalizerManager():
             comp_list = split(" ", addr)
             list_len = len(comp_list)
             counter = 1
-            print(comp_list)
             for component in comp_list:
                 if counter == 1:
                     item['comp_1'] = component

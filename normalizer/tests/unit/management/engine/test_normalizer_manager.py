@@ -163,3 +163,21 @@ class NormalizerManagerTest(TestCase):
         self.assertEqual(self.manager.address_list[0]['comp_5'], 'pépinière')
         self.assertEqual(self.manager.address_list[0]['comp_6'], '92500')
         self.assertEqual(self.manager.address_list[0]['comp_7'], 'suresnes')
+    
+    def test_remove_incorrect_prefix(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la pépinière 92500 suresnes',
+                'comp_1': '51',
+                'comp_2': 'av',
+                'comp_3': 'de',
+                'comp_4': 'la',
+                'comp_5': 'pépinière',
+                'comp_6': '92500',
+                'comp_7': 'suresnes'
+            }
+        ]
+        self.manager._NormalizerManager__remove_incorrect_prefix()
+        self.assertEqual(self.manager.address_list[0]['comp_1'], '51')
+        self.assertEqual(self.manager.address_list[0]['comp_2'], 'allee')
