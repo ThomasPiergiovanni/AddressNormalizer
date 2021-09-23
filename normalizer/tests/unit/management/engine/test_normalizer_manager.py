@@ -178,12 +178,12 @@ class NormalizerManagerTest(TestCase):
                 'comp_7': 'suresnes'
             }
         ]
-        self.manager._NormalizerManager__remove_incorrect_prefix()
+        self.manager._replace_prefixes()
         self.assertEqual(self.manager.address_list[0]['comp_1'], '51')
         self.assertEqual(self.manager.address_list[0]['comp_2'], 'avenue')
     
 
-    def test_loop_prefix(self):
+    def test__set_prefix(self):
         item = {
             'id': '1',
             'address': '51 allée de la pépinière 92500 suresnes',
@@ -207,12 +207,12 @@ class NormalizerManagerTest(TestCase):
                 'incomformities': ["AV", "Av", "av"]
             }
         ]
-        method_output = self.manager._NormalizerManager__loop_prefix_dict(
+        method_output = self.manager._NormalizerManager__set_prefix(
             item, component, component_name, perfix_list
         )
         self.assertEqual(method_output['comp_2'], 'avenue')
     
-    def test__upper_components_address_list(self):
+    def test__upper_components(self):
         self.manager.address_list = [
             {
                 'id': '1',
@@ -226,11 +226,11 @@ class NormalizerManagerTest(TestCase):
                 'comp_7': 'suresnes'
             }
         ]
-        self.manager._upper_components_address_list()
+        self.manager._upper_components()
         self.assertEqual(self.manager.address_list[0]['comp_1'], '51')
         self.assertEqual(self.manager.address_list[0]['comp_2'], 'AVENUE')
 
-    def test_upper_component(self):
+    def test_upper(self):
         item = {
             'id': '1',
             'address': '51 allée de la pépinière 92500 suresnes',
@@ -244,7 +244,7 @@ class NormalizerManagerTest(TestCase):
         }
         component = item['comp_2']
         component_name = 'comp_2'
-        method_output = self.manager._NormalizerManager__upper_component(
+        method_output = self.manager._NormalizerManager__upper(
             item, component, component_name
         )
         self.assertEqual(method_output['comp_2'], 'AV')
