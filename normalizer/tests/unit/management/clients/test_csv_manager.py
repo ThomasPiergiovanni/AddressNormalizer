@@ -50,3 +50,4 @@ class CsvManagerTest(TestCase):
         self.assertEqual(
             self.manager.imported_data[2][1], ''
         )
+    

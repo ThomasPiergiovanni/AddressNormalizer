@@ -249,3 +249,20 @@ class NormalizerManagerTest(TestCase):
         self.assertEqual(method_output['comp_2'], 'AV')
 
 
+    def test_create_new_address(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la pépinière 92500 suresnes',
+                'comp_1': '51',
+                'comp_2': 'AVENUE',
+                'comp_3': 'DE',
+                'comp_4': 'LA',
+                'comp_5': 'PEPINIERE'
+            }
+        ]
+        self.manager.test_create_new_address()
+        self.asserEqual(
+            self.manager.address_list['new_address'],
+            '51 AVENUE DE LA PEPINIERE'
+        )
