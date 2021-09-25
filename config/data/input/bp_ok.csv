@@ -11,7 +11,6 @@ id;adresse
 9;3 promenade de l'abbaye (chez M. Guillaume CAPMAS)
 10;4 rue de Saint-Cloud
 11;32 rue des cottages
-12;
 13;33 rue Jules Ferry
 14;28 place Jean Jaurès
 15;15 rue Worth
@@ -87,7 +86,6 @@ id;adresse
 86;18 avenue Edouard Vaillant
 87;17 rue du ratrait
 88;2 rue Robert Joyeux
-89;NSP
 90;4 allée Camille Saint-Saens
 91;15 B rue Emile Duclaux
 92;10 avenue du maréchal juin
@@ -223,7 +221,6 @@ id;adresse
 222;21 rue Georges Appay
 223;1 allée Charles Gounod
 224;65 avenue des Bas Rogers
-225;NSP
 226;11 avenue Sisley
 227;105 Rue De Verdun
 228;56 rue Danton
@@ -309,11 +306,9 @@ id;adresse
 308;4 bis rue du calvaire
 309;22 Rue de la Poterie
 310;13 rue Raymond Cosson
-311;
 312;2 place du général Leclerc
 313;2 rue Honoré d'Estienne d'Orves
 314;124 bis rue Carnot
-315;NSP
 316;44 rue Carnot
 317;9 allée Santos Dumont
 318;14 rue G. Appay
@@ -345,7 +340,6 @@ id;adresse
 344;2 RUE FLORENT DANCOURT
 345;26 rue du pas saint maurice
 346;5 allée Georges Bizet
-347;NSP
 348;1 Rue des Cottages
 349;17 rue des tourneroches
 350;9 boulevard Aristide Briand
@@ -373,7 +367,6 @@ id;adresse
 372;39 route des fusillés de la Résistance
 373;3 rue Chevreul
 374;3 Rue Raymond Cosson, Appt 84
-375;NSP
 376;9 rue carnot
 377;108 rue de la République
 378;7 rue Curie
@@ -381,7 +374,6 @@ id;adresse
 380;13 avenue Georges Pompidou
 381;1 allée des bouchons
 382;11 bis rue des Cottages
-383;NSP
 384;19 rue gardenat lapostol
 385;12 place du général Leclerc
 386;93 rue de la République
@@ -390,7 +382,6 @@ id;adresse
 389;1 square des Tourterelles
 390;41 route des fusilles de la resistance
 391;1 avenue sisley
-392;
 393;2 rue des Chèvremonts
 394;6 allée des maraichers
 395;23 rue Roger Salengro
@@ -423,153 +414,3 @@ id;adresse
 422;15 rue Benoit Malon
 423;3 boulevard Aristide Briand
 424;2 rue Berthelot
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;

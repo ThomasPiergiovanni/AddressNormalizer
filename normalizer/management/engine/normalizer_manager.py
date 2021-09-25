@@ -5,7 +5,11 @@ import os
 from re import split, sub
 
 from config.custom_settings.app_variables import (
-    INPUT_DIR, INPUT_FILE, ZIP_CODE_LIST, CITY_NAME_LIST,
+    INPUT_DIR,
+    ADDR_FILE, ADDR_DELIMITER, ADDR_QUOTECHAR,
+    REF_FILE, REF_DELIMITER, REF_QUOTECHAR,
+    OUTPUT_FILE,
+    ZIP_CODE_LIST, CITY_NAME_LIST,
     ALLEE_WORDS, AVENUE_WORDS, BOULEVARD_WORDS, CHEMIN_WORDS,
     COURS_WORDS, IMPASSE_WORDS, PASSAGE_WORDS, PLACE_WORDS,
     PROMENADE_WORDS, QUAI_WORDS, ROUTE_WORDS, RUE_WORDS,
@@ -24,18 +28,40 @@ class NormalizerManager():
         self.ref_address_list = []
     
     def normalize(self, 
-            path_to_files,
-            addresses, 
-            addr_delimiter,
-            addr_quotechar, 
-            ref_addresses,
-            ref_addr_delimiter,
-            ref_addr_quotechar
+            path_to_files=INPUT_DIR,
+            addr_filename=ADDR_FILE, 
+            addr_delimiter=ADDR_DELIMITER ,
+            addr_quotechar=ADDR_QUOTECHAR, 
+            ref_filename=REF_FILE,
+            ref_delimiter=REF_DELIMITER,
+            ref_quotechar=REF_QUOTECHAR,
+            output_filename=OUTPUT_FILE
     ):
         csv_manager = CsvManager()
         self.raw_address = csv_manager.import_data(
-            path_to_files, addresses, addr_delimiter, addr_quotechar
+            path_to_files, addr_filename, addr_delimiter, addr_quotechar
         )
+        self.raw_ref_address = csv_manager.import_data(
+            path_to_files, ref_filename, ref_delimiter, ref_quotechar
+        )
+        self._set_address_attributes()
+        self._set_ref_address_attributes()
+        self._remove_zip()
+        self._remove_unwanted_characters()
+        self._lower_string()
+        self._remove_accent()
+        self._remove_city_name()
+        self._strip_and_trim()
+        self._set_address_components()
+        self._replace_prefixes()
+        self._upper_components()
+        self._create_new_address()
+        self._matcher()
+        csv_manager.export_data(
+            path_to_files, output_filename, self.address_list
+        )
+
+
 
     def _set_address_attributes(self):
         counter = 0
@@ -46,6 +72,17 @@ class NormalizerManager():
             }
             if counter >= 1:
                 self.address_list.append(data)
+            counter += 1
+
+    def _set_ref_address_attributes(self):
+        counter = 0
+        for raw in self.raw_ref_address:
+            data = {
+                'id': raw[15],
+                'address': raw[8]
+            }
+            if counter >= 1:
+                self.ref_address_list.append(data)
             counter += 1
 
     def _remove_zip(self):
@@ -226,13 +263,15 @@ class NormalizerManager():
                 item['new_address'] = component
         return item
 
-    def _set_ref_address_attributes(self):
-        counter = 0
-        for raw in self.raw_ref_address:
-            data = {
-                'id': raw[15],
-                'address': raw[8]
-            }
-            if counter >= 1:
-                self.ref_address_list.append(data)
-            counter += 1
+    def _matcher(self):
+        for item in self.address_list:
+            not_in_ref = True
+            for ref in self.ref_address_list:
+                if (item['new_address'] == ref['address']) and not_in_ref:
+                    print(item['new_address'])
+                    item['match'] = True
+                    not_in_ref = False
+                elif (item['new_address'] != ref['address']) and not_in_ref:
+                    item['match'] = False
+
+  

@@ -65,6 +65,15 @@ class NormalizerManagerTest(TestCase):
             '51 allée de la pépinière'
         )
 
+    def test_set_ref_address_attributes(self):
+        self.manager.raw_ref_address = self.emulate_raw_ref_address_list()
+        self.manager._set_ref_address_attributes()
+        self.assertEqual(self.manager.ref_address_list[0]['id'], '21')
+        self.assertEqual(
+            self.manager.ref_address_list[1]['address'],
+            '5 BIS RUE BERTHELOT'
+        )
+
     def test_remove_zip(self):
         self.manager.address_list = self.emulate_address_list()
         self.manager._remove_zip()
@@ -266,11 +275,45 @@ class NormalizerManagerTest(TestCase):
             '51 AVENUE DE LA PEPINIERE'
         )
 
-    def test_set_ref_address_attributes(self):
-        self.manager.raw_ref_address = self.emulate_raw_ref_address_list()
-        self.manager._set_ref_address_attributes()
-        self.assertEqual(self.manager.ref_address_list[0]['id'], '21')
+    def test_matcher(self):
+        self.manager.address_list = [
+            {
+                'id': '1',
+                'address': '51 allée de la pépinière 92500 suresnes',
+                'comp_1': '51',
+                'comp_2': 'AVENUE',
+                'comp_3': 'DE',
+                'comp_4': 'LA',
+                'comp_5': 'PEPINIERE',
+                'new_address': '51 AVENUE DE LA PEPINIERE' 
+            }, 
+            {
+                'id': '2',
+                'address': '52 allée de la pépinière 92500 suresnes',
+                'comp_1': '52',
+                'comp_2': 'AVENUE',
+                'comp_3': 'DE',
+                'comp_4': 'LA',
+                'comp_5': 'PEPINIERE',
+                'new_address': '52 AVENUE DE LA PEPINIERE' 
+            }
+        ]
+        self.manager.ref_address_list = [
+            {
+                'id': '1',
+                'address': '51 AVENUE DE LA PEPINIERE'
+            }, 
+            {
+                'id': '3',
+                'address': '53 AVENUE DE LA PEPINIERE' 
+            }
+        ]
+        self.manager._matcher()
         self.assertEqual(
-            self.manager.ref_address_list[1]['address'],
-            '5 BIS RUE BERTHELOT'
+            self.manager.address_list[0]['match'], True
         )
+        self.assertEqual(
+            self.manager.address_list[1]['match'], False
+        )
+
+        

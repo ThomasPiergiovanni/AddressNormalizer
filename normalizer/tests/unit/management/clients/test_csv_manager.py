@@ -39,7 +39,7 @@ class CsvManagerTest(TestCase):
             TEST_INPUT_DIR,
             TEST_REF_FILE,
             ';',
-            '"'
+            None
         )
         self.assertEqual(data[1][0], 'lieu')
         self.assertEqual(data[2][2], '5')

@@ -11,10 +11,18 @@ INPUT_DIR  = r'D:\03_suresnes\AddressNormalizer\config\data\input'
 
 #### INPUT FILE
 # Input file name
-INPUT_FILE = 'bp_ok.csv'
+ADDR_FILE = 'bp_ok.csv'
+ADDR_DELIMITER=";"
+ADDR_QUOTECHAR=None
 
 #### REFERENCE_FILE
 REF_FILE = 'adresse.csv'
+REF_DELIMITER=";"
+REF_QUOTECHAR=None
+
+#### OUTPUT FILENAME ####
+OUTPUT_FILE='output.csv'
+
 
 #### TEST ####
 
@@ -27,6 +35,8 @@ TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
 TEST_INPUT_FILE = 'bp_ok.csv'
 TEST_REF_FILE = 'adresse.csv'
 
+
+#### APP VARIABLES ####
 
 ZIP_CODE_LIST = [
     '92500',
