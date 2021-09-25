@@ -15,15 +15,24 @@ class NormalizerManagerTest(TestCase):
         self.ref_address = None
     
     @classmethod
-    def emulate_raw_addresses_list(cls):
-        raw_addresses_list = [
+    def emulate_raw_address_list(cls):
+        raw_address_list = [
             ['id', 'adresse'],
             ['1', '12 rue Ledru-Rollin'],
             ['2', '65 rue des Bas Rogers'],
             ['46', '51 allée de la pépinière'],
             ['3', '28 rue victor hugo']
         ]
-        return raw_addresses_list
+        return raw_address_list
+
+    @classmethod
+    def emulate_raw_ref_address_list(cls):
+        raw_ref_address_list = [
+            ['categorie', 'sous_categorie', 'numero', 'type_voie', 'determinant', 'nom', 'code_postal', 'ville', 'adresse_complete', 'source', 'id_origin', 'qualite', 'indice_repetition', 'libelle', 'nom_voie', 'id_adresse', 'geom', 'quartier'],
+            ['lieu', '', '13', 'RUE', '', 'BERTHELOT', '92150', 'SURESNES', '13 RUE BERTHELOT', 'BANO', '920730665H-13', '0.60000002', '', '13', 'RUE BERTHELOT', '21', '2400000001000000010004006D0F00000C000000010000009080C2BCFF1488B6BCE8E411', 'CENTRE VILLE'],
+            ['lieu', '', '5', 'RUE', '', 'BERTHELOT', '92150', 'SURESNES', '5 BIS RUE BERTHELOT', 'BANO', '920730665H-5B', '0.60000002', 'BIS', '5 BIS', 'RUE BERTHELOT', '22', '2400000001000000010004006D0F00000C00000001000000BDB2DFBCFF149E98ADE8E411', 'CENTRE VILLE']
+        ]
+        return raw_ref_address_list
     
     @classmethod
     def emulate_address_list(cls):
@@ -47,9 +56,9 @@ class NormalizerManagerTest(TestCase):
         ]
         return address_list
 
-    def _set_addresses_attributes(self):
-        self.manager.address_list = self.emulate_raw_addresses_list()
-        self.manager._set_attributes()
+    def test_set_address_attributes(self):
+        self.manager.raw_address = self.emulate_raw_address_list()
+        self.manager._set_address_attributes()
         self.assertEqual(self.manager.address_list[0]['id'], '1')
         self.assertEqual(
             self.manager.address_list[2]['address'],
@@ -255,4 +264,13 @@ class NormalizerManagerTest(TestCase):
         self.assertEqual(
             self.manager.address_list[0]['new_address'],
             '51 AVENUE DE LA PEPINIERE'
+        )
+
+    def test_set_ref_address_attributes(self):
+        self.manager.raw_ref_address = self.emulate_raw_ref_address_list()
+        self.manager._set_ref_address_attributes()
+        self.assertEqual(self.manager.ref_address_list[0]['id'], '21')
+        self.assertEqual(
+            self.manager.ref_address_list[1]['address'],
+            '5 BIS RUE BERTHELOT'
         )

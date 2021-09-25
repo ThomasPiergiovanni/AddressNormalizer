@@ -34,7 +34,7 @@ class CsvManagerTest(TestCase):
         self.assertEqual(data[1][0], '1')
         self.assertEqual(data[2][1], '65 rue des Bas Rogers')
 
-    def test_import_data_with_ref_file(self):
+    def test_import_data_with_ref_adress_file(self):
         data = self.manager.import_data(
             TEST_INPUT_DIR,
             TEST_REF_FILE,

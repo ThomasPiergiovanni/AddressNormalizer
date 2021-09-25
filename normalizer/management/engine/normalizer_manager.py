@@ -18,9 +18,10 @@ class NormalizerManager():
     """Normalizer manager app class
     """
     def __init__(self):
-        self.raw_addresses = None
-        self.raw_ref_addresses = None
+        self.raw_address = None
+        self.raw_ref_address = None
         self.address_list = []
+        self.ref_address_list = []
     
     def normalize(self, 
             path_to_files,
@@ -32,15 +33,13 @@ class NormalizerManager():
             ref_addr_quotechar
     ):
         csv_manager = CsvManager()
-        self.raw_addresses = csv_manager.import_data(
+        self.raw_address = csv_manager.import_data(
             path_to_files, addresses, addr_delimiter, addr_quotechar
         )
 
-
-   
-    def _set_addresses_attributes(self):
+    def _set_address_attributes(self):
         counter = 0
-        for raw in self.raw_addresses:
+        for raw in self.raw_address:
             data = {
                 'id': raw[0],
                 'address': raw[1]
@@ -226,3 +225,14 @@ class NormalizerManager():
             else:
                 item['new_address'] = component
         return item
+
+    def _set_ref_address_attributes(self):
+        counter = 0
+        for raw in self.raw_ref_address:
+            data = {
+                'id': raw[15],
+                'address': raw[8]
+            }
+            if counter >= 1:
+                self.ref_address_list.append(data)
+            counter += 1
