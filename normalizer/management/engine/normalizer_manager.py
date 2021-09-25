@@ -123,6 +123,7 @@ class NormalizerManager():
             addr = addr.replace("ô","o")
             addr = addr.replace("ö","o")
             addr = addr.replace("ò","o")
+            addr = addr.replace("ç","c")
             item['address'] = addr
 
     def _remove_city_name(self):
@@ -268,7 +269,6 @@ class NormalizerManager():
             not_in_ref = True
             for ref in self.ref_address_list:
                 if (item['new_address'] == ref['address']) and not_in_ref:
-                    print(item['new_address'])
                     item['match'] = True
                     not_in_ref = False
                 elif (item['new_address'] != ref['address']) and not_in_ref:

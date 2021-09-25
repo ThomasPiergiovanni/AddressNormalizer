@@ -21,7 +21,7 @@ REF_DELIMITER=";"
 REF_QUOTECHAR=None
 
 #### OUTPUT FILENAME ####
-OUTPUT_FILE='output.csv'
+OUTPUT_FILE='output_2.csv'
 
 
 #### TEST ####
@@ -63,7 +63,7 @@ AVENUE_WORDS = {
 
 BOULEVARD_WORDS = {
     'correct_name': "boulevard",
-    'incomformities': ["BD", "Bd", "bd"]
+    'incomformities': ["BD", "Bd", "bd", "bvd"]
 }
 
 CHEMIN_WORDS = {

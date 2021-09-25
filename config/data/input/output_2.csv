@@ -1,0 +1,415 @@
+id;address;new_address;match
+1;12 rue ledru rollin;12 RUE LEDRU ROLLIN;True
+2;65 rue des bas rogers;65 RUE DES BAS ROGERS;True
+46;51 allee de la pepiniere;51 ALLEE DE LA PEPINIERE;True
+3;28 rue victor hugo;28 RUE VICTOR HUGO;True
+4;39 avenue georges pompidou;39 AVENUE GEORGES POMPIDOU;True
+5;74 boulevard henri sellier;74 BOULEVARD HENRI SELLIER;True
+6;99 rue de verdun;99 RUE DE VERDUN;True
+7;8 bis rue michelet;8 BIS RUE MICHELET;True
+9;3 promenade de l'abbaye;3 PROMENADE DE L'ABBAYE;True
+10;4 rue de saint-cloud;4 RUE DE SAINT-CLOUD;True
+11;32 rue des cottages;32 RUE DES COTTAGES;True
+13;33 rue jules ferry;33 RUE JULES FERRY;True
+14;28 avenue jean jaures;28 AVENUE JEAN JAURES;True
+15;15 rue worth;15 RUE WORTH;True
+16;21 rue gardenat lapostol;21 RUE GARDENAT LAPOSTOL;True
+17;13 rue chevreul;13 RUE CHEVREUL;True
+18;25 avenue georges pompidou;25 AVENUE GEORGES POMPIDOU;True
+19;16 rue berthelot;16 RUE BERTHELOT;True
+20;149 boulevard henri sellier;149 BOULEVARD HENRI SELLIER;True
+21;3 allee des mouettes;3 ALLEE DES MOUETTES;True
+22;20 bis rue ledru rollin;20 BIS RUE LEDRU ROLLIN;True
+23;33 rue roger salengro;33 RUE ROGER SALENGRO;True
+24;14 rue claude burgod;14 RUE CLAUDE BURGOD;True
+25;11 rue gambetta;11 RUE GAMBETTA;True
+26;17 rue de la cerisaie;17 RUE DE LA CERISAIE;True
+27;4 rue georges appay;4 RUE GEORGES APPAY;True
+28;3 rue du professeur louis-rene nougier;3 RUE DU PROFESSEUR LOUIS-RENE NOUGIER;True
+29;4 b rue du calvaire;4 B RUE DU CALVAIRE;False
+30;27 ter rue de verdun;27 TER RUE DE VERDUN;True
+31;57 rue jean-jacques rousseau;57 RUE JEAN-JACQUES ROUSSEAU;True
+32;57 rue jean-jacques rousseau;57 RUE JEAN-JACQUES ROUSSEAU;True
+33;rue edouard nieuport;RUE EDOUARD NIEUPORT;False
+34;5 allee edgar fournier;5 ALLEE EDGAR FOURNIER;True
+35;61 rue fernand forest;61 RUE FERNAND FOREST;True
+36;116 rue carnot;116 RUE CARNOT;True
+37;12 rue de l'hippodrome;12 RUE DE L'HIPPODROME;True
+38;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+39;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+40;14 bis rue du ratrait;14 BIS RUE DU RATRAIT;True
+41;31 rue benoit malon;31 RUE BENOIT MALON;True
+42;14 avenue de la belle gabrielle;14 AVENUE DE LA BELLE GABRIELLE;True
+43;7 rue honore d'estienne d'orves;7 RUE HONORE D'ESTIENNE D'ORVES;True
+44;3 avenue justin godart;3 AVENUE JUSTIN GODART;True
+45;7 rue de saint-cloud;7 RUE DE SAINT-CLOUD;True
+47;18 boulevard aristide briand;18 BOULEVARD ARISTIDE BRIAND;True
+48;1 allee jacques offenbach;1 ALLEE JACQUES OFFENBACH;True
+49;14 bis rue des bartoux;14 BIS RUE DES BARTOUX;True
+50;36 rue du docteur emile roux;36 RUE DU DOCTEUR EMILE ROUX;True
+51;16 rue kellogg;16 RUE KELLOGG;True
+52;69 rue des bas rogers;69 RUE DES BAS ROGERS;True
+53;1 avenue justin godart;1 AVENUE JUSTIN GODART;True
+54;61 rue roger salengro;61 RUE ROGER SALENGRO;True
+55;17 rue pasteur;17 RUE PASTEUR;True
+56;41 rue du docteur magnan;41 RUE DU DOCTEUR MAGNAN;True
+57;3 promenade de l'abbaye;3 PROMENADE DE L'ABBAYE;True
+58;34 rue pasteur;34 RUE PASTEUR;False
+59;27 route des fusilles de la resistance;27 ROUTE DES FUSILLES DE LA RESISTANCE;True
+60;11 ter rue de la liberte;11 TER RUE DE LA LIBERTE;True
+61;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+62;62 rue des moulineaux;62 RUE DES MOULINEAUX;True
+63;15 avenue jean jaures;15 AVENUE JEAN JAURES;True
+64;24 rue carnot;24 RUE CARNOT;True
+65;42 rue merlin de thionville;42 RUE MERLIN DE THIONVILLE;True
+66;33 rue roger salengro;33 RUE ROGER SALENGRO;True
+67;23 avenue jean jaures;23 AVENUE JEAN JAURES;True
+68;54 allee santos dumont;54 ALLEE SANTOS DUMONT;True
+69;6 bis rue de la liberte;6 BIS RUE DE LA LIBERTE;True
+70;6 bis rue de la liberte;6 BIS RUE DE LA LIBERTE;True
+71;10 place henri iv;10 PLACE HENRI IV;True
+72;27 rue albert caron;27 RUE ALBERT CARON;True
+73;33 rue du docteur magnan;33 RUE DU DOCTEUR MAGNAN;True
+74;35 avenue jean jaures;35 AVENUE JEAN JAURES;True
+75;132 boulevard marechal de lattre de tassigny;132 BOULEVARD MARECHAL DE LATTRE DE TASSIGNY;True
+76;71 rue albert caron;71 RUE ALBERT CARON;True
+77;63 rue jean-jacques rousseau;63 RUE JEAN-JACQUES ROUSSEAU;True
+78;1 avenue sisley;1 AVENUE SISLEY;True
+79;44 rue cluseret;44 RUE CLUSERET;True
+80;26 bis rue des puits;26 BIS RUE DES PUITS;True
+81;20 rue de sevres;20 RUE DE SEVRES;True
+82;5 allee des primeveres;5 ALLEE DES PRIMEVERES;True
+83;5 rue jean mace;5 RUE JEAN MACE;True
+84;20 rue de la poterie;20 RUE DE LA POTERIE;True
+85;45 rue des carrieres;45 RUE DES CARRIERES;True
+86;18 avenue edouard vaillant;18 AVENUE EDOUARD VAILLANT;True
+87;17 rue du ratrait;17 RUE DU RATRAIT;True
+88;2 rue robert joyeux;2 RUE ROBERT JOYEUX;True
+90;4 allee camille saint-saens;4 ALLEE CAMILLE SAINT-SAENS;True
+91;15 bis rue emile duclaux;15 BIS RUE EMILE DUCLAUX;True
+92;10 avenue du marechal juin;10 AVENUE DU MARECHAL JUIN;True
+93;46 avenue franklin roosevelt;46 AVENUE FRANKLIN ROOSEVELT;True
+94;149 boulevard henri sellier;149 BOULEVARD HENRI SELLIER;True
+95;9 place du general leclerc;9 PLACE DU GENERAL LECLERC;True
+96;24 rue des vignes;24 RUE DES VIGNES;True
+97;17 rue du commandant riviere;17 RUE DU COMMANDANT RIVIERE;True
+98;2 avenue de la criolla;2 AVENUE DE LA CRIOLLA;True
+99;9 bis quai leon blum;9 BIS QUAI LEON BLUM;True
+100;16 rue gabriel philippe;16 RUE GABRIEL PHILIPPE;True
+101;10 rue ledru rollin;10 RUE LEDRU ROLLIN;True
+102;37 allee de la pepiniere;37 ALLEE DE LA PEPINIERE;True
+103;3 rue jacques decour;3 RUE JACQUES DECOUR;True
+104;16 bis rue du ratrait;16 BIS RUE DU RATRAIT;True
+105;70 rue carnot;70 RUE CARNOT;True
+106;8 rue hubert charpentier;8 RUE HUBERT CHARPENTIER;True
+107;58 avenue des landes;58 AVENUE DES LANDES;True
+108;72 rue pasteur;72 RUE PASTEUR;True
+109;1 rue diderot;1 RUE DIDEROT;True
+110;55 rue gardenat lapostol;55 RUE GARDENAT LAPOSTOL;True
+111;12 rue de la liberte;12 RUE DE LA LIBERTE;True
+112;11 impasse des vignerons;11 IMPASSE DES VIGNERONS;True
+113;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+114;14 allee des mimosas;14 ALLEE DES MIMOSAS;True
+115;15 allee santos dumont;15 ALLEE SANTOS DUMONT;True
+116;4 rue jacques decour;4 RUE JACQUES DECOUR;True
+117;18 rue de sevres;18 RUE DE SEVRES;True
+118;26 bis rue paul bert;26 BIS RUE PAUL BERT;True
+119;27 bis rue albert caron;27 BIS RUE ALBERT CARON;True
+120;12 chemin des roses;12 CHEMIN DES ROSES;True
+121;56 rue des couvaloux;56 RUE DES COUVALOUX;True
+122;57 rue jean-jacques rousseau;57 RUE JEAN-JACQUES ROUSSEAU;True
+123;10 rue de la poterie;10 RUE DE LA POTERIE;True
+124;64 rue des chenes;64 RUE DES CHENES;True
+125;6 avenue alexandre maistrasse;6 AVENUE ALEXANDRE MAISTRASSE;True
+126;12 rue pages;12 RUE PAGES;True
+127;146 rue gambetta;146 RUE GAMBETTA;True
+128;9 rue jacques decour;9 RUE JACQUES DECOUR;True
+129;9 chemin de la liberte;9 CHEMIN DE LA LIBERTE;True
+130;93 rue rouget de lisle;93 RUE ROUGET DE LISLE;True
+131;65 avenue des bas-rogers;65 AVENUE DES BAS-ROGERS;False
+132;allee santos dumont;ALLEE SANTOS DUMONT;False
+133;40 rue des parigots;40 RUE DES PARIGOTS;True
+134;6 avenue sisley;6 AVENUE SISLEY;True
+135;44 avenue jean jaures;44 AVENUE JEAN JAURES;True
+136;13 avenue de l'abbe saint-pierre;13 AVENUE DE L'ABBE SAINT-PIERRE;True
+137;7 avenue sisley;7 AVENUE SISLEY;True
+138;1 allee santos dumont;1 ALLEE SANTOS DUMONT;True
+139;28 rue du pas saint-maurice;28 RUE DU PASSAGE SAINT-MAURICE;False
+140;56 rue danton;56 RUE DANTON;True
+141;22 rue de la poterie;22 RUE DE LA POTERIE;True
+142;160 rue gambetta;160 RUE GAMBETTA;True
+143;4 bis rue du calvaire;4 BIS RUE DU CALVAIRE;True
+144;69 rue des bas rogers;69 RUE DES BAS ROGERS;True
+145;5 allee louis chevrolet;5 ALLEE LOUIS CHEVROLET;True
+146;5 rue du fecheray;5 RUE DU FECHERAY;True
+147;27 rue pierre dupont;27 RUE PIERRE DUPONT;True
+148;18 rue de sevres;18 RUE DE SEVRES;True
+149;32 rue jean-jacques rousseau;32 RUE JEAN-JACQUES ROUSSEAU;True
+150;1 bis rue guillaume lenoir;1 BIS RUE GUILLAUME LENOIR;True
+151;4 avenue gustave stresemann;4 AVENUE GUSTAVE STRESEMANN;True
+152;3 allee des lilas;3 ALLEE DES LILAS;True
+153;48 rue des cherchevets;48 RUE DES CHERCHEVETS;True
+154;55 ter bd henri sellier;55 TER BOULEVARD HENRI SELLIER;True
+155;41 rue jean-jacques rousseau;41 RUE JEAN-JACQUES ROUSSEAU;True
+156;4 rue du professeur louis-rene nougier;4 RUE DU PROFESSEUR LOUIS-RENE NOUGIER;True
+157;32 rue des acquevilles;32 RUE DES ACQUEVILLES;True
+158;6 bis allee edgar fournier;6 BIS ALLEE EDGAR FOURNIER;False
+159;62 rue georges appay;62 RUE GEORGES APPAY;True
+160;7 domaine des hocquettes;7 DOMAINE DES HOCQUETTES;True
+161;6 avenue justin godart;6 AVENUE JUSTIN GODART;True
+162;33 rue pierre dupont;33 RUE PIERRE DUPONT;True
+163;25 avenue georges pompidou;25 AVENUE GEORGES POMPIDOU;True
+164;46 rue pasteur;46 RUE PASTEUR;True
+165;4 rue de la liberte;4 RUE DE LA LIBERTE;True
+166;39 rue des carrieres;39 RUE DES CARRIERES;True
+167;8 allee des violettes;8 ALLEE DES VIOLETTES;True
+168;47 rue des bartoux;47 RUE DES BARTOUX;True
+169;15 rue du chemin vert;15 RUE DU CHEMIN VERT;True
+170;10 quai leon blum;10 QUAI LEON BLUM;True
+171;40 rue des parigots;40 RUE DES PARIGOTS;True
+172;46 rue georges appay;46 RUE GEORGES APPAY;True
+173;5 rue francois bougault;5 RUE FRANCOIS BOUGAULT;True
+174;101 rue des chenes;101 RUE DES CHENES;True
+175;71 rue albert caron;71 RUE ALBERT CARON;True
+176;15 allee santos dumont;15 ALLEE SANTOS DUMONT;True
+177;5 boulevard aristide briand;5 BOULEVARD ARISTIDE BRIAND;True
+178;17 rue de verdun;17 RUE DE VERDUN;True
+179;8 rue du bac;8 RUE DU BAC;True
+180;19 avenue edouard vaillant;19 AVENUE EDOUARD VAILLANT;True
+181;6 allee des platanes;6 ALLEE DES PLATANES;True
+182;3 allee des bergeronnettes;3 ALLEE DES BERGERONNETTES;True
+183;16 rue des carrieres;16 RUE DES CARRIERES;True
+184;9 rue du commandant riviere;9 RUE DU COMMANDANT RIVIERE;True
+185;3 allee du 8 mai 1945;3 ALLEE DU 8 MAI 1945;True
+186;24 rue de l'hippodrome;24 RUE DE L'HIPPODROME;True
+187;45 rue des bourets;45 RUE DES BOURETS;True
+188;56 rue des bons raisins;56 RUE DES BONS RAISINS;True
+189;74 rue carnot;74 RUE CARNOT;True
+190;37 rue desbassayns de richemont;37 RUE DESBASSAYNS DE RICHEMONT;True
+191;27 rue de sevres;27 RUE DE SEVRES;True
+192;115 rue gambetta;115 RUE GAMBETTA;True
+193;47 rue des bartoux;47 RUE DES BARTOUX;True
+194;5 avenue georges pompidou;5 AVENUE GEORGES POMPIDOU;True
+195;3 allee santos dumont;3 ALLEE SANTOS DUMONT;True
+196;11 domaine des hocquettes;11 DOMAINE DES HOCQUETTES;True
+197;2 allee des orangers;2 ALLEE DES ORANGERS;True
+198;1 domaine des hocquettes;1 DOMAINE DES HOCQUETTES;True
+199;12 rue kellogg;12 RUE KELLOGG;True
+200;11 rue des bons raisins;11 RUE DES BONS RAISINS;True
+201;3 rue pierre dupont;3 RUE PIERRE DUPONT;True
+202;57 rue jean-jacques rousseau;57 RUE JEAN-JACQUES ROUSSEAU;True
+203;19 avenue edouard vaillant;19 AVENUE EDOUARD VAILLANT;True
+204;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+205;37 rue des parigots;37 RUE DES PARIGOTS;True
+206;69 bvd henri sellier;69 BOULEVARD HENRI SELLIER;True
+207;7 bis rue jean mace;7 BIS RUE JEAN MACE;True
+208;97 rue pasteur;97 RUE PASTEUR;True
+209;48 rue jean-jacques rousseau;48 RUE JEAN-JACQUES ROUSSEAU;True
+210;122 rue de la republique;122 RUE DE LA REPUBLIQUE;True
+211;13 rue beausejour;13 RUE BEAUSEJOUR;True
+212;33 rue des parigots;33 RUE DES PARIGOTS;True
+213;4 rue des parigots;4 RUE DES PARIGOTS;True
+214;94 rue paul bert;94 RUE PAUL BERT;True
+215;39 rue des moulineaux;39 RUE DES MOULINEAUX;True
+216;5 allee des rives de bagatelle;5 ALLEE DES RIVES DE BAGATELLE;True
+217;24 rue ledru rollin;24 RUE LEDRU ROLLIN;True
+218;15 rue benoit malon;15 RUE BENOIT MALON;True
+219;75 rue rouget de lisle;75 RUE ROUGET DE LISLE;True
+220;7 rue honore d'estienne d'orves;7 RUE HONORE D'ESTIENNE D'ORVES;True
+221;43 chemin du syndicat des cultivateurs;43 CHEMIN DU SYNDICAT DES CULTIVATEURS;True
+222;21 rue georges appay;21 RUE GEORGES APPAY;True
+223;1 allee charles gounod;1 ALLEE CHARLES GOUNOD;True
+224;65 rue des bas rogers;65 RUE DES BAS ROGERS;True
+226;11 avenue sisley;11 AVENUE SISLEY;True
+227;105 rue de verdun;105 RUE DE VERDUN;True
+228;56 rue danton;56 RUE DANTON;True
+229;12 rue artheme genteur;12 RUE ARTHEME GENTEUR;True
+230;94 rue des chenes;94 RUE DES CHENES;True
+231;2 allee des orangers;2 ALLEE DES ORANGERS;True
+232;53 bis boulevard marechal de lattre de tassigny;53 BIS BOULEVARD MARECHAL DE LATTRE DE TASSIGNY;True
+233;71 boulevard marechal de lattre de tassigny;71 BOULEVARD MARECHAL DE LATTRE DE TASSIGNY;True
+234;51 rue paul bert;51 RUE PAUL BERT;True
+235;39 rue du docteur magnan;39 RUE DU DOCTEUR MAGNAN;True
+236;37 rue jacques decour;37 RUE JACQUES DECOUR;True
+237;23 rue roger salengro;23 RUE ROGER SALENGRO;True
+238;64 rue des chenes;64 RUE DES CHENES;True
+239;76 rue rouget de lisle;76 RUE ROUGET DE LISLE;True
+240;60 rue des bons raisins;60 RUE DES BONS RAISINS;True
+241;29 bis rue emile duclaux;29 BIS RUE EMILE DUCLAUX;True
+242;allee des pinsons;ALLEE DES PINSONS;False
+243;33 rue des acquevilles;33 RUE DES ACQUEVILLES;True
+244;21 rue maurice payret dortail;21 RUE MAURICE PAYRET DORTAIL;True
+245;8 allee louis chevrolet;8 ALLEE LOUIS CHEVROLET;True
+246;24 rue garibaldi;24 RUE GARIBALDI;True
+247;7 chemin du syndicat des cultivateurs;7 CHEMIN DU SYNDICAT DES CULTIVATEURS;True
+248;2 rue de locarno;2 RUE DE LOCARNO;True
+249;25 rue du docteur emile roux;25 RUE DU DOCTEUR EMILE ROUX;True
+250;1 allee des gros buissons;1 ALLEE DES GROS BUISSONS;True
+251;22 esplanade jacques chirac;22 ESPLANADE JACQUES CHIRAC;True
+252;17 rue du ratrait;17 RUE DU RATRAIT;True
+253;3 rue pierre dupont;3 RUE PIERRE DUPONT;True
+254;6 rue des pavillons;6 RUE DES PAVILLONS;True
+255;5 avenue edouard vaillant;5 AVENUE EDOUARD VAILLANT;True
+256;21 rue carnot;21 RUE CARNOT;True
+257;3 rue des velettes;3 RUE DES VELETTES;True
+258;132 boulevard marechal de lattre de tassigny;132 BOULEVARD MARECHAL DE LATTRE DE TASSIGNY;True
+259;97 rue pasteur;97 RUE PASTEUR;True
+260;23 av jean jaures;23 AVENUE JEAN JAURES;True
+261;23 rue raymond cosson;23 RUE RAYMOND COSSON;True
+262;5 allee des rives de bagatelle;5 ALLEE DES RIVES DE BAGATELLE;True
+263;2 rue du mont valerien;2 RUE DU MONT VALERIEN;True
+264;14 rue artheme genteur;14 RUE ARTHEME GENTEUR;True
+265;47 avenue jean jaures;47 AVENUE JEAN JAURES;True
+266;91 rue des chenes;91 RUE DES CHENES;True
+267;33 allee des tilleuls;33 ALLEE DES TILLEULS;True
+268;22 rue victor hugo;22 RUE VICTOR HUGO;True
+269;83 rue de verdun;83 RUE DE VERDUN;True
+270;12 rue emilien colin;12 RUE EMILIEN COLIN;True
+271;49 rue pasteur;49 RUE PASTEUR;True
+272;rue de la republique;RUE DE LA REPUBLIQUE;False
+273;74 rue gambetta;74 RUE GAMBETTA;True
+274;24 rue emilien colin;24 RUE EMILIEN COLIN;True
+275;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+276;4 avenue justin godart;4 AVENUE JUSTIN GODART;True
+277;7 allee louis chevrolet;7 ALLEE LOUIS CHEVROLET;True
+278;24 rue carnot;24 RUE CARNOT;True
+279;1 allee des rives de bagatelle;1 ALLEE DES RIVES DE BAGATELLE;True
+280;1 avenue justin godart;1 AVENUE JUSTIN GODART;True
+281;7 bis rue emile duclaux;7 BIS RUE EMILE DUCLAUX;True
+282;10 rue etienne dolet;10 RUE ETIENNE DOLET;True
+283;7 rue du clos des ermites;7 RUE DU CLOS DES ERMITES;True
+284;6 rue gabriel philippe;6 RUE GABRIEL PHILIPPE;True
+285;10 bis rue de bellevue;10 BIS RUE DE BELLEVUE;True
+286;3 allee des lilas;3 ALLEE DES LILAS;True
+287;8 bis rue michelet;8 BIS RUE MICHELET;True
+288;10 rue rouget de lisle;10 RUE ROUGET DE LISLE;True
+289;24 rue emilien colin;24 RUE EMILIEN COLIN;True
+290;17 rue perronet;17 RUE PERRONET;True
+291;17 rue du ratrait;17 RUE DU RATRAIT;True
+292;10 rue de la cerisaie;10 RUE DE LA CERISAIE;True
+293;6 rue du professeur louis-rene nougier;6 RUE DU PROFESSEUR LOUIS-RENE NOUGIER;True
+294;26 rue de la cerisaie;26 RUE DE LA CERISAIE;True
+295;6 rue du professeur louis-rene nougier;6 RUE DU PROFESSEUR LOUIS-RENE NOUGIER;True
+296;2 allee des violettes;2 ALLEE DES VIOLETTES;True
+297;73 rue des bas rogers;73 RUE DES BAS ROGERS;True
+298;8 rue des velettes;8 RUE DES VELETTES;True
+299;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+300;25 allee des tilleuls;25 ALLEE DES TILLEULS;True
+301;11 rue de verdun;11 RUE DE VERDUN;True
+302;2 rue florent dancourt;2 RUE FLORENT DANCOURT;True
+303;3 bis rue beausejour;3 BIS RUE BEAUSEJOUR;True
+304;4 ter rue diderot;4 TER RUE DIDEROT;True
+305;10 rue de la liberte;10 RUE DE LA LIBERTE;True
+306;17 allee santos dumont;17 ALLEE SANTOS DUMONT;True
+307;2 square de la concorde;2 SQUARE DE LA CONCORDE;True
+308;4 bis rue du calvaire;4 BIS RUE DU CALVAIRE;True
+309;22 rue de la poterie;22 RUE DE LA POTERIE;True
+310;13 rue raymond cosson;13 RUE RAYMOND COSSON;True
+312;2 place du general leclerc;2 PLACE DU GENERAL LECLERC;True
+313;2 rue honore d'estienne d'orves;2 RUE HONORE D'ESTIENNE D'ORVES;True
+314;124 bis rue carnot;124 BIS RUE CARNOT;True
+316;44 rue carnot;44 RUE CARNOT;True
+317;9 allee santos dumont;9 ALLEE SANTOS DUMONT;True
+318;14 rue georges appay;14 RUE GEORGES APPAY;True
+319;7 rue paul bert;7 RUE PAUL BERT;True
+320;7 rue paul bert;7 RUE PAUL BERT;True
+321;39 av georges pompidou;39 AVENUE GEORGES POMPIDOU;True
+322;33 rue jean-jacques rousseau;33 RUE JEAN-JACQUES ROUSSEAU;True
+323;3 avenue georges pompidou;3 AVENUE GEORGES POMPIDOU;True
+324;40 rue de la republique;40 RUE DE LA REPUBLIQUE;True
+325;44 rue du fecheray;44 RUE DU FECHERAY;True
+326;4 bis rue du calvaire;4 BIS RUE DU CALVAIRE;True
+327;9 ter allee des marronniers;9 TER ALLEE DES MARRONNIERS;True
+328;56 bis rue du val d'or;56 BIS RUE DU VAL D'OR;True
+329;80 rue des cherchevets;80 RUE DES CHERCHEVETS;True
+330;21 rue de saint-cloud;21 RUE DE SAINT-CLOUD;True
+331;6 rue gabriel philippe;6 RUE GABRIEL PHILIPPE;True
+332;37 bis rue voltaire;37 BIS RUE VOLTAIRE;True
+333;4 rue georges appay;4 RUE GEORGES APPAY;True
+334;44 avenue jean jaures;44 AVENUE JEAN JAURES;True
+335;17 rue emile duclaux;17 RUE EMILE DUCLAUX;True
+336;6 promenade saint-leufroy;6 PROMENADE SAINT-LEUFROY;True
+337;4 rue claude burgod;4 RUE CLAUDE BURGOD;True
+338;147 boulevard henri sellier;147 BOULEVARD HENRI SELLIER;True
+339;35 rue jean-jacques rousseau;35 RUE JEAN-JACQUES ROUSSEAU;True
+340;7 bis rue jean mace;7 BIS RUE JEAN MACE;True
+341;15 place du general leclerc;15 PLACE DU GENERAL LECLERC;True
+342;10 avenue du marechal juin;10 AVENUE DU MARECHAL JUIN;True
+343;60 rue voltaire;60 RUE VOLTAIRE;True
+344;2 rue florent dancourt;2 RUE FLORENT DANCOURT;True
+345;26 rue du pas saint-maurice;26 RUE DU PASSAGE SAINT-MAURICE;False
+346;5 allee georges bizet;5 ALLEE GEORGES BIZET;True
+348;1 rue des cottages;1 RUE DES COTTAGES;True
+349;17 rue des tourneroches;17 RUE DES TOURNEROCHES;True
+350;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+351;22 rue de la poterie;22 RUE DE LA POTERIE;True
+352;25 avenue georges pompidou;25 AVENUE GEORGES POMPIDOU;True
+353;43 rue des parigots;43 RUE DES PARIGOTS;True
+354;37 rue de la republique;37 RUE DE LA REPUBLIQUE;True
+355;6 avenue du marechal juin;6 AVENUE DU MARECHAL JUIN;True
+356;27 ter rue benoit malon;27 TER RUE BENOIT MALON;True
+357;promenade saint leufroy;PROMENADE SAINT LEUFROY;False
+358;19 rue de verdun;19 RUE DE VERDUN;True
+359;19 rue des puits;19 RUE DES PUITS;True
+360;21 rue albert caron;21 RUE ALBERT CARON;True
+361;43 rue cluseret;43 RUE CLUSERET;True
+362;1 place de la halle;1 PLACE DE LA HALLE;True
+363;10 avenue du marechal juin;10 AVENUE DU MARECHAL JUIN;True
+364;13 rue victor hugo;13 RUE VICTOR HUGO;True
+365;20 allee des jonquilles;20 ALLEE DES JONQUILLES;True
+366;9 rue gabriel philippe;9 RUE GABRIEL PHILIPPE;True
+367;6 allee des maraichers;6 ALLEE DES MARAICHERS;True
+368;39 rue des meuniers;39 RUE DES MEUNIERS;True
+369;42 rue roger salengro;42 RUE ROGER SALENGRO;True
+370;19 rue albert caron;19 RUE ALBERT CARON;True
+371;142 boulevard marechal de lattre de tassigny;142 BOULEVARD MARECHAL DE LATTRE DE TASSIGNY;True
+372;39 route des fusilles de la resistance;39 ROUTE DES FUSILLES DE LA RESISTANCE;True
+373;3 rue chevreul;3 RUE CHEVREUL;True
+374;3 rue raymond cosson;3 RUE RAYMOND COSSON;True
+376;9 rue carnot;9 RUE CARNOT;True
+377;108 rue de la republique;108 RUE DE LA REPUBLIQUE;True
+378;7 rue curie;7 RUE CURIE;True
+379;19 rue albert caron;19 RUE ALBERT CARON;True
+380;13 avenue georges pompidou;13 AVENUE GEORGES POMPIDOU;True
+381;1 allee des bouchons;1 ALLEE DES BOUCHONS;False
+382;11 bis rue des cottages;11 BIS RUE DES COTTAGES;True
+384;19 rue gardenat lapostol;19 RUE GARDENAT LAPOSTOL;True
+385;12 place du general leclerc;12 PLACE DU GENERAL LECLERC;True
+386;93 rue de la republique;93 RUE DE LA REPUBLIQUE;True
+387;57 route des fusilles de la resistance;57 ROUTE DES FUSILLES DE LA RESISTANCE;True
+388;15 rue de verdun;15 RUE DE VERDUN;True
+389;1 square des tourterelles;1 SQUARE DES TOURTERELLES;True
+390;41 route des fusilles de la resistance;41 ROUTE DES FUSILLES DE LA RESISTANCE;True
+391;1 avenue sisley;1 AVENUE SISLEY;True
+393;2 rue des chevremonts;2 RUE DES CHEVREMONTS;True
+394;6 allee des maraichers;6 ALLEE DES MARAICHERS;True
+395;23 rue roger salengro;23 RUE ROGER SALENGRO;True
+396;8 rue des acquevilles;8 RUE DES ACQUEVILLES;True
+397;116 boulevard marechal de lattre de tassigny;116 BOULEVARD MARECHAL DE LATTRE DE TASSIGNY;True
+398;4 rue etienne dolet;4 RUE ETIENNE DOLET;True
+399;126 rue carnot;126 RUE CARNOT;True
+400;10 rue de la liberte;10 RUE DE LA LIBERTE;True
+401;16 avenue georges pompidou;16 AVENUE GEORGES POMPIDOU;False
+402;1 allee des platanes;1 ALLEE DES PLATANES;True
+403;30 rue carnot;30 RUE CARNOT;True
+404;25 rue jacques decour;25 RUE JACQUES DECOUR;True
+405;33 rue jules ferry;33 RUE JULES FERRY;True
+406;19 avenue de la belle gabrielle;19 AVENUE DE LA BELLE GABRIELLE;True
+407;51 rue gardenat lapostol;51 RUE GARDENAT LAPOSTOL;True
+408;9 allee de longchamp;9 ALLEE DE LONGCHAMP;True
+409;10 rue etienne dolet;10 RUE ETIENNE DOLET;True
+410;27 rue pierre dupont;27 RUE PIERRE DUPONT;True
+411;82 rue de la liberte;82 RUE DE LA LIBERTE;True
+412;24 rue des vignes;24 RUE DES VIGNES;True
+413;114 rue carnot;114 RUE CARNOT;True
+414;8 bis rue michelet;8 BIS RUE MICHELET;True
+415;52 avenue jean jaures;52 AVENUE JEAN JAURES;True
+416;11 allee santos dumont;11 ALLEE SANTOS DUMONT;True
+417;9 boulevard aristide briand;9 BOULEVARD ARISTIDE BRIAND;True
+418;33 rue de la republique;33 RUE DE LA REPUBLIQUE;True
+419;54 rue des bons raisins;54 RUE DES BONS RAISINS;True
+420;99 rue des chenes;99 RUE DES CHENES;True
+421;36 rue jean-jacques rousseau;36 RUE JEAN-JACQUES ROUSSEAU;True
+422;15 rue benoit malon;15 RUE BENOIT MALON;True
+423;3 boulevard aristide briand;3 BOULEVARD ARISTIDE BRIAND;True
+424;2 rue berthelot;2 RUE BERTHELOT;True
