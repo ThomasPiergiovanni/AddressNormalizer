@@ -18,17 +18,29 @@ class NormalizerManager():
     """Normalizer manager app class
     """
     def __init__(self):
-        self.raw_data = None
+        self.raw_addresses = None
+        self.raw_ref_addresses = None
         self.address_list = []
-
-    def _get_raw_data(self):
-        csv_manager = CsvManager()
-        csv_manager.import_data(INPUT_DIR, INPUT_FILE, ";", None)
-        self.raw_data = csv_manager.imported_data
     
-    def _set_attributes(self):
+    def normalize(self, 
+            path_to_files,
+            addresses, 
+            addr_delimiter,
+            addr_quotechar, 
+            ref_addresses,
+            ref_addr_delimiter,
+            ref_addr_quotechar
+    ):
+        csv_manager = CsvManager()
+        self.raw_addresses = csv_manager.import_data(
+            path_to_files, addresses, addr_delimiter, addr_quotechar
+        )
+
+
+   
+    def _set_addresses_attributes(self):
         counter = 0
-        for raw in self.raw_data:
+        for raw in self.raw_addresses:
             data = {
                 'id': raw[0],
                 'address': raw[1]

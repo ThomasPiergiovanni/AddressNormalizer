@@ -15,15 +15,15 @@ class NormalizerManagerTest(TestCase):
         self.ref_address = None
     
     @classmethod
-    def emulate_raw_data(cls):
-        raw_data = [
+    def emulate_raw_addresses_list(cls):
+        raw_addresses_list = [
             ['id', 'adresse'],
             ['1', '12 rue Ledru-Rollin'],
             ['2', '65 rue des Bas Rogers'],
             ['46', '51 allée de la pépinière'],
             ['3', '28 rue victor hugo']
         ]
-        return raw_data
+        return raw_addresses_list
     
     @classmethod
     def emulate_address_list(cls):
@@ -47,17 +47,8 @@ class NormalizerManagerTest(TestCase):
         ]
         return address_list
 
-    def test_get_raw_data(self):
-        csv_manager_test = CsvManagerTest()
-        csv_manager_test.emulate_imported_data()
-        self.manager._get_raw_data()
-        self.assertEqual(
-            self.manager.raw_data[2],
-            csv_manager_test.imported_data[2]
-        )
-    
-    def test_set_attributes(self):
-        self.manager.raw_data = self.emulate_raw_data()
+    def _set_addresses_attributes(self):
+        self.manager.address_list = self.emulate_raw_addresses_list()
         self.manager._set_attributes()
         self.assertEqual(self.manager.address_list[0]['id'], '1')
         self.assertEqual(

@@ -24,30 +24,24 @@ class CsvManagerTest(TestCase):
             ['4', '28 rue victor hugo']
         ]
     
-    def test_import_data_with_source_file(self):
-        self.manager.import_data(
+    def test_import_data_with_adress_file(self):
+        data = self.manager.import_data(
             TEST_INPUT_DIR,
             TEST_INPUT_FILE,
             ';',
             None
         )
-        self.assertEqual(self.manager.imported_data[1][0], '1')
-        self.assertEqual(
-            self.manager.imported_data[2][1], '65 rue des Bas Rogers'
-        )
+        self.assertEqual(data[1][0], '1')
+        self.assertEqual(data[2][1], '65 rue des Bas Rogers')
 
     def test_import_data_with_ref_file(self):
-        self.manager.import_data(
+        data = self.manager.import_data(
             TEST_INPUT_DIR,
             TEST_REF_FILE,
             ';',
             '"'
         )
-        self.assertEqual(self.manager.imported_data[1][0], 'lieu')
-        self.assertEqual(
-            self.manager.imported_data[2][2], '5'
-        )
-        self.assertEqual(
-            self.manager.imported_data[2][1], ''
-        )
+        self.assertEqual(data[1][0], 'lieu')
+        self.assertEqual(data[2][2], '5')
+        self.assertEqual(data[2][1], '')
     
