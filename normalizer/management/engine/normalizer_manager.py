@@ -187,3 +187,30 @@ class NormalizerManager():
             item[component_name] = component
         return item
 
+    def _create_new_address(self):
+        for item in self.address_list:
+            comp_1 = item.get('comp_1', None)
+            item = self.__add_to_string(item, comp_1)
+            comp_2 = item.get('comp_2', None)
+            item = self.__add_to_string(item, comp_2)
+            comp_3 = item.get('comp_3', None)
+            item = self.__add_to_string(item, comp_3)
+            comp_4 = item.get('comp_4', None)
+            item = self.__add_to_string(item, comp_4)
+            comp_5 = item.get('comp_5', None)
+            item = self.__add_to_string(item, comp_5)
+            comp_6 = item.get('comp_6', None)
+            item = self.__add_to_string(item, comp_6)
+            comp_7 = item.get('comp_7', None)
+            item = self.__add_to_string(item, comp_7)
+            comp_8 = item.get('comp_8', None)
+            item = self.__add_to_string(item, comp_8)
+
+    def __add_to_string(self, item, component):
+        if component:
+            new_address = item.get('new_address', None)
+            if new_address:
+                item['new_address'] = new_address + ' ' + component
+            else:
+                item['new_address'] = component
+        return item

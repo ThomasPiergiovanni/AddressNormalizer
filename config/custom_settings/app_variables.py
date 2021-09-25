@@ -1,14 +1,21 @@
 """App globals variables
 """
 
+# Input dir in work laptop
+#INPUT_DIR  = r'C:\02_dev\AddressNormalizer\config\data\input'
 
-INPUT_DIR  = r'C:\02_dev\AddressNormalizer\config\data\input'
-#INPUT_DIR  = r'D:\03_suresnes\AddressNormalizer\config\data\input'
+# Input dir in home laptop
+INPUT_DIR  = r'D:\03_suresnes\AddressNormalizer\config\data\input'
+
+# Input file name
 INPUT_FILE = 'bp_ok.csv'
 
-# Test INPUT DIR
-TEST_INPUT_DIR = r'C:\02_dev\AddressNormalizer\config\data\test_data'
-# TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
+# Test INPUT DIR in work laptop
+# TEST_INPUT_DIR = r'C:\02_dev\AddressNormalizer\config\data\test_data'
+
+# Test INPUT DIR in home laptop
+TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
+
 TEST_INPUT_FILE = 'bp_ok.csv'
 TEST_REF_FILE = 'adresse.csv'
 

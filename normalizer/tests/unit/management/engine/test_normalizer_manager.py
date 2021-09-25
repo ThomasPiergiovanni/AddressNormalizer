@@ -260,8 +260,8 @@ class NormalizerManagerTest(TestCase):
                 'comp_5': 'PEPINIERE'
             }
         ]
-        self.manager.test_create_new_address()
-        self.asserEqual(
-            self.manager.address_list['new_address'],
+        self.manager._create_new_address()
+        self.assertEqual(
+            self.manager.address_list[0]['new_address'],
             '51 AVENUE DE LA PEPINIERE'
         )
