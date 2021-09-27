@@ -41,7 +41,7 @@ class CsvManagerTest(TestCase):
             ';',
             None
         )
-        self.assertEqual(data[1][0], 'lieu')
-        self.assertEqual(data[2][2], '5')
-        self.assertEqual(data[2][1], '')
+        self.assertEqual(data[1][0], '1')
+        self.assertEqual(data[2][2], ' ')
+        self.assertEqual(data[2][4], 'RUE')
     

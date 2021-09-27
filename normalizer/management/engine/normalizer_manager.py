@@ -13,7 +13,7 @@ from config.custom_settings.app_variables import (
     ALLEE_WORDS, AVENUE_WORDS, BOULEVARD_WORDS, CHEMIN_WORDS,
     COURS_WORDS, IMPASSE_WORDS, PASSAGE_WORDS, PLACE_WORDS,
     PROMENADE_WORDS, QUAI_WORDS, ROUTE_WORDS, RUE_WORDS,
-    SENTE_WORDS
+    SENTE_WORDS, BIS_WORDS, TER_WORDS
 )
 from normalizer.management.clients.csv_manager import CsvManager
 
@@ -78,8 +78,8 @@ class NormalizerManager():
         counter = 0
         for raw in self.raw_ref_address:
             data = {
-                'id': raw[15],
-                'address': raw[8]
+                'id': raw[0],
+                'address': raw[9]
             }
             if counter >= 1:
                 self.ref_address_list.append(data)
@@ -200,7 +200,7 @@ class NormalizerManager():
             ALLEE_WORDS, AVENUE_WORDS, BOULEVARD_WORDS, CHEMIN_WORDS,
             COURS_WORDS, IMPASSE_WORDS, PASSAGE_WORDS, PLACE_WORDS,
             PROMENADE_WORDS, QUAI_WORDS, ROUTE_WORDS, RUE_WORDS,
-            SENTE_WORDS
+            SENTE_WORDS, BIS_WORDS, TER_WORDS
         ]
         return prefix_list
 

@@ -4,10 +4,10 @@
 #### INPUT DIR ####
 
 # Work laptop
-#INPUT_DIR  = r'C:\02_dev\AddressNormalizer\config\data\input'
+INPUT_DIR  = r'C:\02_dev\AddressNormalizer\config\data\input'
 
 # Home laptop
-INPUT_DIR  = r'D:\03_suresnes\AddressNormalizer\config\data\input'
+ #INPUT_DIR  = r'D:\03_suresnes\AddressNormalizer\config\data\input'
 
 #### INPUT FILE
 # Input file name
@@ -16,21 +16,21 @@ ADDR_DELIMITER=";"
 ADDR_QUOTECHAR=None
 
 #### REFERENCE_FILE
-REF_FILE = 'adresse.csv'
+REF_FILE = 'adresse_20210927.csv'
 REF_DELIMITER=";"
 REF_QUOTECHAR=None
 
 #### OUTPUT FILENAME ####
-OUTPUT_FILE='output_2.csv'
+OUTPUT_FILE='output_4.csv'
 
 
 #### TEST ####
 
 # Test INPUT DIR in work laptop
-# TEST_INPUT_DIR = r'C:\02_dev\AddressNormalizer\config\data\test_data'
+TEST_INPUT_DIR = r'C:\02_dev\AddressNormalizer\config\data\test_data'
 
 # Test INPUT DIR in home laptop
-TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
+#TEST_INPUT_DIR = r'D:\03_suresnes\AddressNormalizer\config\data\test_data'
 
 TEST_INPUT_FILE = 'bp_ok.csv'
 TEST_REF_FILE = 'adresse.csv'
@@ -114,4 +114,14 @@ RUE_WORDS = {
 SENTE_WORDS = {
     'correct_name': "sente",
     'incomformities': ["SEN", "Sen", "sen"]
+}
+
+BIS_WORDS = {
+    'correct_name': "bis",
+    'incomformities': ["B", "b"]
+}
+
+TER_WORDS = {
+    'correct_name': "ter",
+    'incomformities': ["T", "t"]
 }

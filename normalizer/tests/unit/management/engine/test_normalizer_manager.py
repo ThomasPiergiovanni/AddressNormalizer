@@ -28,9 +28,9 @@ class NormalizerManagerTest(TestCase):
     @classmethod
     def emulate_raw_ref_address_list(cls):
         raw_ref_address_list = [
-            ['categorie', 'sous_categorie', 'numero', 'type_voie', 'determinant', 'nom', 'code_postal', 'ville', 'adresse_complete', 'source', 'id_origin', 'qualite', 'indice_repetition', 'libelle', 'nom_voie', 'id_adresse', 'geom', 'quartier'],
-            ['lieu', '', '13', 'RUE', '', 'BERTHELOT', '92150', 'SURESNES', '13 RUE BERTHELOT', 'BANO', '920730665H-13', '0.60000002', '', '13', 'RUE BERTHELOT', '21', '2400000001000000010004006D0F00000C000000010000009080C2BCFF1488B6BCE8E411', 'CENTRE VILLE'],
-            ['lieu', '', '5', 'RUE', '', 'BERTHELOT', '92150', 'SURESNES', '5 BIS RUE BERTHELOT', 'BANO', '920730665H-5B', '0.60000002', 'BIS', '5 BIS', 'RUE BERTHELOT', '22', '2400000001000000010004006D0F00000C00000001000000BDB2DFBCFF149E98ADE8E411', 'CENTRE VILLE']
+            ['objectid','categorie', 'sous_categorie', 'numero', 'type_voie', 'determinant', 'nom', 'code_postal', 'ville', 'adresse_complete', 'source', 'id_origin', 'qualite', 'indice_repetition', 'libelle', 'nom_voie', 'quartier', 'shape'],
+            ['1','lieu', '', '13', 'RUE', '', 'BERTHELOT', '92150', 'SURESNES', '13 RUE BERTHELOT', 'BANO', '920730665H-13', '0.60000002', '', '13', 'RUE BERTHELOT', 'CENTRE VILLE', '2400000001000000010004006D0F00000C000000010000009080C2BCFF1488'],
+            ['2','lieu', '', '5', 'RUE', '', 'BERTHELOT', '92150', 'SURESNES', '5 BIS RUE BERTHELOT', 'BANO', '920730665H-5B', '0.60000002', 'BIS', '5 BIS', 'RUE BERTHELOT', 'CENTRE VILLE', '2400000001000000010004006D0F00000C000000010000009080C2BCFF1488']
         ]
         return raw_ref_address_list
     
@@ -68,7 +68,7 @@ class NormalizerManagerTest(TestCase):
     def test_set_ref_address_attributes(self):
         self.manager.raw_ref_address = self.emulate_raw_ref_address_list()
         self.manager._set_ref_address_attributes()
-        self.assertEqual(self.manager.ref_address_list[0]['id'], '21')
+        self.assertEqual(self.manager.ref_address_list[0]['id'], '1')
         self.assertEqual(
             self.manager.ref_address_list[1]['address'],
             '5 BIS RUE BERTHELOT'
