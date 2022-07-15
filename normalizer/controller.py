@@ -1,5 +1,6 @@
 import csv
 import os
+import re
 
 from normalizer.config.env import (
     INPUT_DIR,
@@ -63,3 +64,26 @@ class Controller:
                 row = row.replace(unwanted_character, ' ')
             data.append(row)
         return data
+    
+    def __remove_xtra_blanks(self):
+        data = []
+        for row in self.column_values:
+            row = re.sub(' +',' ',row)
+            row = row.strip()
+            data.append(row)
+        return data
+
+    def __lower_chars(self):
+        data = []
+        for row in self.column_values:
+            row = row.lower()
+            data.append(row)
+        return data
+    
+    def __splits_words(self):
+        data = []
+        for row in self.column_values:
+            row = row.split()
+            data.append(row)
+        return data
+

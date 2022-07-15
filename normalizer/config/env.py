@@ -22,6 +22,7 @@ OUTPUT_FILE='output_test_file.csv'
 
 
 #### UNWANTED CHARACTERS
-UNWANTED_CHARACTERS = [
-    ',', ';', '.', '"', '/'
-]
+UNWANTED_CHARACTERS = ',;."/\\()*'
+
+#### REPETITION
+

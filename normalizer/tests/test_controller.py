@@ -17,7 +17,9 @@ class TestController(TestCase):
         self.emulate_column_values = [
             '20 bis, rue Ledru-Rollin',
             '24, rue Carnot',
-            '12, rue Ledru Rollin'
+            '12, rue Ledru Rollin',
+            '2 ter,* rue (Ledru\Rollin)',
+            'A quaTER, rue Ledru Rollin'
         ]
     
     def tearDown(self):
@@ -53,12 +55,36 @@ class TestController(TestCase):
     def test_remove_characters(self):
         self.controller.column_values = self.emulate_column_values
         data = self.controller._Controller__remove_characters()
-        self.assertEqual(
-            data[0], '20 bis  rue Ledru-Rollin'
-        )
-        self.assertEqual(
-            data[2], '12  rue Ledru Rollin'
-        )
+        self.assertEqual(data[0], '20 bis  rue Ledru-Rollin')
+        self.assertEqual(data[2], '12  rue Ledru Rollin')
+        self.assertEqual(data[3], '2 ter   rue  Ledru Rollin ')
+
+    def test_remove_xtra_blanks(self):
+        self.controller.column_values = [
+            'This string   has  space', '    This  one too'
+        ]
+        data = self.controller._Controller__remove_xtra_blanks()
+        self.assertEqual(data[0], 'This string has space')
+        self.assertEqual(data[1], 'This one too')
+
+    def test_lower_chars(self):
+        self.controller.column_values = self.emulate_column_values
+        data = self.controller._Controller__lower_chars()
+        self.assertEqual(data[0], '20 bis, rue ledru-rollin')
+        self.assertEqual(data[2], '12, rue ledru rollin')
+
+    def test_splits_words(self):
+        self.controller.column_values = [
+            '20 bis rue ledru-rollin',
+            '12 rue ledru rollin'
+        ]
+        data = self.controller._Controller__splits_words()
+        self.assertEqual(data[0][0], '20')
+        self.assertEqual(data[0][3], 'ledru-rollin')
+        self.assertEqual(data[1][2], 'ledru')
+        
+
+
 
 # if __name__ == '__main__':
 #     unittest.main()
