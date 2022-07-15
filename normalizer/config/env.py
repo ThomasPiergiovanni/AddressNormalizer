@@ -19,3 +19,9 @@ INPUT_FILE_TARGET_COLUMN = 'adresse'
 
 #### OUTPUT FILE
 OUTPUT_FILE='output_test_file.csv'
+
+
+#### UNWANTED CHARACTERS
+UNWANTED_CHARACTERS = [
+    ',', ';', '.', '"', '/'
+]

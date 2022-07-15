@@ -8,27 +8,57 @@ class TestController(TestCase):
 
     def setUp(self):
         self.controller = Controller()
-
+        self.emulate_input_data = [
+            ['nom', 'adresse', 'quartier'],
+            ['', '20 bis, rue Ledru-Rollin', 'centre ville'],
+            ['', '24, rue Carnot', 'centre ville'],
+            ['', '12, rue Ledru Rollin', 'centre ville']
+        ]
+        self.emulate_column_values = [
+            '20 bis, rue Ledru-Rollin',
+            '24, rue Carnot',
+            '12, rue Ledru Rollin'
+        ]
+    
+    def tearDown(self):
+        self.controller = None
+        self.emulate_input_data = None
+        self.emulate_column_values = None
+    
     def test_import_data(self):
         data = self.controller._Controller__import_data(
             directory=r'C:\02_dev\AddressNormalizer\data\input',
             filename='test_file.csv',
-            delimiter=';',
+            delimiter=',',
             quotechar='"'
         )
         counter = 0
-        for row in data:
-            if counter == 0 :
-                self.assertEqual(row[0], 'nom')
-                self.assertEqual(row[1],'adresse')
-                self.assertEqual(row[2],'quartier')
-            elif counter == 2:
-                self.assertEqual(row[0], None)
-                self.assertEqual(row[1], '24, rue Carnot')
-                self.assertEqual(row[2], 'centre ville')
-            else:
-                pass
-            counter += 1
+        self.assertEqual(data[0][0], 'nom')
+        self.assertEqual(data[2][1], '24, rue Carnot')
+    
+    def test_get_column_index(self):
+        column_name = 'adresse'
+        self.controller.input_data = self.emulate_input_data
+        index = self.controller._Controller__get_column_index(column_name)
+        self.assertEqual(index, 1)
+
+    def test_get_column_value(self):
+        self.controller.input_data = self.emulate_input_data
+        self.controller.column_index = 1
+        data = self.controller._Controller__get_column_value()
+        self.assertEqual(
+            data[2], '12, rue Ledru Rollin'
+        )
+
+    def test_remove_characters(self):
+        self.controller.column_values = self.emulate_column_values
+        data = self.controller._Controller__remove_characters()
+        self.assertEqual(
+            data[0], '20 bis  rue Ledru-Rollin'
+        )
+        self.assertEqual(
+            data[2], '12  rue Ledru Rollin'
+        )
 
 # if __name__ == '__main__':
 #     unittest.main()
