@@ -18,6 +18,8 @@ class Controller:
     def __init__(self):
         self.input_data = None
         self.column_index = None
+        self.column_values = None
+        self.words_list = None
 
     def normalization(self):
         self.input_data = self.__import_data(
@@ -86,4 +88,24 @@ class Controller:
             row = row.split()
             data.append(row)
         return data
+
+    def __isolate_hnr(self):
+        data = []
+        for words in self.address_list:
+            address = {
+                'hnr': None,
+                'rep':  None,
+                'name' : None,
+            }
+            for word in words:
+                try:
+                    if int(word):
+                        address['hnr'] = word
+                        data.append(address)
+                except ValueError:
+                    pass
+        print(data)
+        return data
+
+
 

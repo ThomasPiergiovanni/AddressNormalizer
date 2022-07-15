@@ -82,7 +82,18 @@ class TestController(TestCase):
         self.assertEqual(data[0][0], '20')
         self.assertEqual(data[0][3], 'ledru-rollin')
         self.assertEqual(data[1][2], 'ledru')
-        
+    
+    def test_isolate_hnr(self):
+        self.controller.address_list = [
+            ['20','bis','rue', 'ledru-rollin'],
+            ['12','rue','ledru', 'rollin'],
+            ['83bis','rue','ledru', 'rollin'],
+        ]
+        data = self.controller._Controller__isolate_hnr()
+        self.assertEqual(data[0]['hnr'], '20')
+        self.assertEqual(data[1]['hnr'], '12')
+        self.assertEqual(data[2]['hnr'], '83')
+
 
 
 
