@@ -83,16 +83,41 @@ class TestController(TestCase):
         self.assertEqual(data[0][3], 'ledru-rollin')
         self.assertEqual(data[1][2], 'ledru')
     
-    def test_isolate_hnr(self):
+    def test_parser(self):
         self.controller.address_list = [
             ['20','bis','rue', 'ledru-rollin'],
             ['12','rue','ledru', 'rollin'],
-            ['83bis','rue','ledru', 'rollin'],
+            ['84bis','rue','ledru', 'rollin'],
         ]
-        data = self.controller._Controller__isolate_hnr()
+        data = self.controller._Controller__parser()
         self.assertEqual(data[0]['hnr'], '20')
         self.assertEqual(data[1]['hnr'], '12')
-        self.assertEqual(data[2]['hnr'], '83')
+        self.assertEqual(data[2]['hnr'], '84')
+
+    def test_isolate_hnr(self):
+        data = self.controller._Controller__isolate_hnr('20')
+        self.assertEqual(data[0], '20')
+        self.assertEqual(data[1], '')
+        data = self.controller._Controller__isolate_hnr('84bis')
+        self.assertEqual(data[0], '84')
+        self.assertEqual(data[1], 'bis')
+
+    def test_isolate_rep_name(self):
+        data = self.controller._Controller__isolate_rep_name('bis')
+        self.assertEqual(data[0], 'bis')
+        self.assertEqual(data[1], None)
+        data = self.controller._Controller__isolate_rep_name('ter')
+        self.assertEqual(data[0], 'ter')
+        self.assertEqual(data[1], None)
+        data = self.controller._Controller__isolate_rep_name('quater')
+        self.assertEqual(data[0], 'quater')
+        self.assertEqual(data[1], None)
+        data = self.controller._Controller__isolate_rep_name('tamer')
+        self.assertEqual(data[0], None)
+        self.assertEqual(data[1], 'tamer')
+
+
+
 
 
 

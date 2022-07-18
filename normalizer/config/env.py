@@ -26,3 +26,5 @@ UNWANTED_CHARACTERS = ',;."/\\()*'
 
 #### REPETITION
 
+REPETITION = ['bis', 'ter', 'quater']
+

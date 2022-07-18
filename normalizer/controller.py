@@ -10,7 +10,8 @@ from normalizer.config.env import (
     INPUT_FILE_QUOTECHAR,
     INPUT_FILE_TARGET_COLUMN,
     OUTPUT_FILE,
-    UNWANTED_CHARACTERS
+    UNWANTED_CHARACTERS,
+    REPETITION
 )
 
 class Controller:
@@ -89,23 +90,56 @@ class Controller:
             data.append(row)
         return data
 
-    def __isolate_hnr(self):
+    def __parser(self):
         data = []
         for words in self.address_list:
+            name = None
             address = {
                 'hnr': None,
                 'rep':  None,
                 'name' : None,
             }
+            counter = 0
             for word in words:
-                try:
-                    if int(word):
-                        address['hnr'] = word
-                        data.append(address)
-                except ValueError:
-                    pass
+                if counter == 0 :
+                    hnr, rep = self.__isolate_hnr(word)
+                    counter += 1
+                else:
+                    rep, name = self.__isolate_rep_name(word)
+                    name = word
+                address['hnr'] = "".join(hnr)
+                address['rep'] = "".join(rep)
+                address['name'] = name
+            data.append(address)
         print(data)
         return data
 
+    def __isolate_hnr(self, word):
+        hnr = []
+        rep = []
+        for letter in list(word):
+            try:
+                if int(letter):
+                    hnr.append(letter)
+                elif letter == '0':
+                    hnr.append(letter)
+                else:
+                    pass   
+            except Exception:
+                rep.append(letter)
+        hnr = "".join(hnr)
+        rep = "".join(rep)
+        return hnr, rep
 
+    def __isolate_rep_name(self, word):
+        rep = None
+        name = None
+        for repetition in REPETITION:
+            if word == repetition:
+                rep = True
+        if rep:
+            rep = word
+        else:
+            name = word
 
+        return rep, name
