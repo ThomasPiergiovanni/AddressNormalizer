@@ -28,3 +28,52 @@ UNWANTED_CHARACTERS = ',;."/\\()*'
 
 REPETITION = ['bis', 'ter', 'quater']
 
+#### WRONG PREFIX
+
+WRONG_PREFIXS = [ 
+    {
+        'wrong': ('al','all'),
+        'good': 'allée'
+    },
+    {
+        'wrong': ('av','ave'),
+        'good': 'avenue'
+    },
+    {
+        'wrong': ('r'),
+        'good': 'rue'
+    },
+    {
+        'wrong': ('bd','boul'),
+        'good': 'boulevard'
+    },
+    {
+        'wrong': ('i','im','imp'),
+        'good': 'impasse'
+    },
+    {
+        'wrong': ('p','pro','prom'),
+        'good': 'promenade'
+    },
+    {
+        'wrong': ('q','qu'),
+        'good': 'quai'
+    },
+    {
+        'wrong': ('res'),
+        'good': 'résidence'
+    },
+    {
+        'wrong': ('sen'),
+        'good': 'sente'
+    },
+    {
+        'wrong': ('sq', 'squ', 'squa'),
+        'good': 'square'
+    },
+    {
+        'wrong': ('vil'),
+        'good': 'villa'
+    }
+]
+

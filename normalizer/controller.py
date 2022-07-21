@@ -11,7 +11,8 @@ from normalizer.config.env import (
     INPUT_FILE_TARGET_COLUMN,
     OUTPUT_FILE,
     UNWANTED_CHARACTERS,
-    REPETITION
+    REPETITION,
+    WRONG_PREFIXS
 )
 
 class Controller:
@@ -20,9 +21,10 @@ class Controller:
         self.input_data = None
         self.column_index = None
         self.column_values = None
-        self.words_list = None
+        self.address_list = None
+        self.address_dict = None
 
-    def normalization(self):
+    def normalize(self):
         self.input_data = self.__import_data(
             directory=INPUT_DIR,
             filename=INPUT_FILE_NAME,
@@ -31,7 +33,14 @@ class Controller:
         )
         self.column_index = self.__get_column_index(INPUT_FILE_TARGET_COLUMN)
         self.column_values = self.__get_column_value()
-        self.column_values = self.__get_remove_characters()
+        self.column_values = self.__remove_characters()
+        self.column_values = self.__remove_xtra_blanks()
+        self.column_values = self.__lower_chars()
+        self.address_list = self.__splits_in_words()
+        self.address_dict = self.__parser()
+        self.n_address_list = self.__build_address()
+
+
 
 
     def __import_data(
@@ -83,35 +92,43 @@ class Controller:
             data.append(row)
         return data
     
-    def __splits_words(self):
+    def __splits_in_words(self):
         data = []
         for row in self.column_values:
-            row = row.split()
-            data.append(row)
+            word = row.split()
+            data.append(word)
         return data
 
     def __parser(self):
         data = []
         for words in self.address_list:
-            name = None
             address = {
                 'hnr': None,
                 'rep':  None,
                 'name' : None,
             }
             counter = 0
+            name_list = []
             for word in words:
                 if counter == 0 :
                     hnr, rep = self.__isolate_hnr(word)
-                    counter += 1
+                    if hnr:
+                        address['hnr'] = hnr
+                    if rep:
+                        address['rep'] = rep
                 else:
-                    rep, name = self.__isolate_rep_name(word)
-                    name = word
-                address['hnr'] = "".join(hnr)
-                address['rep'] = "".join(rep)
-                address['name'] = name
+                    rep, name = self.__isolate_rep(word)
+                    name = self.__clean_name(name)
+                    if address['rep'] is None:
+                        if rep:
+                            address['rep'] = rep
+                        if name:
+                            name_list.append(name)
+                    else:
+                        name_list.append(name)
+                    address['name'] = self.__build_name(name_list)
+                counter += 1
             data.append(address)
-        print(data)
         return data
 
     def __isolate_hnr(self, word):
@@ -131,7 +148,7 @@ class Controller:
         rep = "".join(rep)
         return hnr, rep
 
-    def __isolate_rep_name(self, word):
+    def __isolate_rep(self, word):
         rep = None
         name = None
         for repetition in REPETITION:
@@ -141,5 +158,39 @@ class Controller:
             rep = word
         else:
             name = word
-
         return rep, name
+
+    def __build_name(self, name_list):
+        name_list_len = len(name_list)
+        if name_list_len > 0:
+            data = ''
+            counter = 1
+            for name in name_list: 
+                if name and name_list_len > counter:
+                    data += name + ' '
+                if name and name_list_len == counter:
+                    data += name
+                counter += 1
+            return data
+
+    def __clean_name(self, name):
+        if name:
+            for w_prefix in WRONG_PREFIXS:
+                if name in w_prefix['wrong']:
+                    return w_prefix['good']
+            return name
+    
+    def __build_address(self):
+        n_address_list = []
+        for address in self.address_dict:
+            n_address = ''
+            if address['hnr']:
+                n_address += address['hnr']
+            if address['rep']:
+                n_address += ' ' + address['rep']
+            if address['name']:
+                n_address += ' ' + address['name']
+            n_address_list.append(n_address)
+        return n_address_list
+
+
