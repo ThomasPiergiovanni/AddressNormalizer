@@ -12,7 +12,9 @@ from normalizer.config.env import (
     OUTPUT_FILE,
     UNWANTED_CHARACTERS,
     REPETITION,
-    WRONG_PREFIXS
+    WRONG_NAMES,
+    WRONG_PREFIXS,
+    DETERMINERS
 )
 
 class Controller:
@@ -23,6 +25,10 @@ class Controller:
         self.column_values = None
         self.address_list = None
         self.address_dict = None
+        self.n_adr_low_list = None
+        self.n_adr_upp_list = None
+        self.n_adr_cap_list = None
+        self.ouput_data = None
 
     def normalize(self):
         self.input_data = self.__import_data(
@@ -38,9 +44,15 @@ class Controller:
         self.column_values = self.__lower_chars()
         self.address_list = self.__splits_in_words()
         self.address_dict = self.__parser()
-        self.n_address_list = self.__build_address()
-
-
+        self.n_adr_low_list = self.__build_low_address()
+        self.n_adr_upp_list = self.__build_upp_address()
+        self.n_adr_cap_list = self.__build_cap_address()
+        self.ouput_data = self.__create_output_structure()
+        self.__export_data(
+            directory=OUTPUT_DIR,
+            filename=OUTPUT_FILE,
+            data=self.ouput_data
+        )
 
 
     def __import_data(
@@ -127,6 +139,7 @@ class Controller:
                     else:
                         name_list.append(name)
                     address['name'] = self.__build_name(name_list)
+                    address['name'] = self.__clean_build_name(address['name'])
                 counter += 1
             data.append(address)
         return data
@@ -172,6 +185,7 @@ class Controller:
                     data += name
                 counter += 1
             return data
+            
 
     def __clean_name(self, name):
         if name:
@@ -179,8 +193,15 @@ class Controller:
                 if name in w_prefix['wrong']:
                     return w_prefix['good']
             return name
+
+    def __clean_build_name(self, name):
+        if name:
+            for w_name in WRONG_NAMES:
+                if name in w_name['wrong']:
+                    return w_name['good']
+            return name
     
-    def __build_address(self):
+    def __build_low_address(self):
         n_address_list = []
         for address in self.address_dict:
             n_address = ''
@@ -192,5 +213,115 @@ class Controller:
                 n_address += ' ' + address['name']
             n_address_list.append(n_address)
         return n_address_list
+
+    def __build_upp_address(self):
+        n_address_up_list = []
+        for address in self.address_dict:
+            n_address = ''
+            if address['hnr']:
+                n_address += address['hnr']
+            if address['rep']:
+                n_address += ' ' + address['rep'].upper()
+            if address['name']:
+                n_address += ' ' + address['name'].upper()
+            n_address_up_list.append(n_address)
+        return n_address_up_list
+
+    def __build_cap_address(self):
+        n_address_cap_list = []
+        for address in self.address_dict:
+            n_address = ''
+            if address['hnr']:
+                n_address += address['hnr']
+            if address['rep']:
+                n_address += ' ' + address['rep'].capitalize()
+            if address['name']:
+                address_name = self.__custom_capitalize(address['name'])
+                n_address += ' ' + address_name
+            n_address_cap_list.append(n_address)
+        return n_address_cap_list
+    
+    def __custom_capitalize(self, address_name):
+        adr_len = len(re.split('\'| ', address_name))
+        if adr_len > 0:
+            data = ''
+            counter = 1
+            for name in re.split('\'| ', address_name):
+                is_determiner = self.__check_determiner(name=name)
+                if is_determiner:
+                    data = self.__add_name(
+                        name=name, adr_len=adr_len, data=data, counter=counter
+                    )
+                    counter += 1
+                else:
+                    c_name = name.capitalize()
+                    data = self.__add_name(
+                        name=c_name, adr_len=adr_len, data=data, counter=counter
+                    )
+                    counter += 1
+            data = data.replace(' d ',' d\'')
+            data = data.replace(' l ',' l\'')
+            return data
+    
+    def __check_determiner(self, name):
+        for determiner in DETERMINERS:
+            if name == determiner:
+                return True
+    
+    def __add_name(self, name, adr_len, data, counter):
+        if name and adr_len > counter:
+            data += name + ' '
+        if name and adr_len == counter:
+            data += name
+        return data
+    
+    def __create_output_structure(self):
+        col_val_len = len(self.column_values)
+        n_adr_low_list_len = len(self.n_adr_low_list)
+        n_adr_upp_list_len = len(self.n_adr_upp_list)
+        n_adr_cap_list_len = len(self.n_adr_cap_list)
+        if (
+                col_val_len == n_adr_low_list_len == n_adr_upp_list_len == n_adr_cap_list_len
+        ):
+            output_structure = []
+            for counter in range(col_val_len):
+                line = []
+                line.append(counter + 1)
+                line.append(self.column_values[counter])
+                line.append(self.n_adr_low_list[counter])
+                line.append(self.n_adr_upp_list[counter])
+                line.append(self.n_adr_cap_list[counter])
+                output_structure.append(line)
+            return output_structure
+        else:
+            pass
+
+    def __export_data(self, directory, filename, data):
+        data_file = os.path.join(directory, filename)
+        with open(data_file, 'w', newline='',  encoding='utf8') as file:
+            filewriter = csv.writer(
+                file, delimiter=';',
+                quotechar='"',
+                quoting=csv.QUOTE_MINIMAL
+            )
+            filewriter.writerow(
+                [
+                    "id",
+                    "input_adr",
+                    "low_adr",
+                    "upp_adr",
+                    "cap_adr"
+                ]
+            )
+            for item in data:
+                filewriter.writerow(
+                    [
+                        item[0],
+                        item[1],
+                        item[2],
+                        item[3],
+                        item[4],
+                    ]
+                )
 
 

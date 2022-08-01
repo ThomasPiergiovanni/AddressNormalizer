@@ -216,14 +216,79 @@ class TestController(TestCase):
         data = self.controller._Controller__clean_name('tamer')
         self.assertEqual(data, 'tamer')
 
-    def test_build_address(self):
+    def test_clean_build_name(self):
+        data = self.controller._Controller__clean_build_name(
+            'avenue des bas rogers'
+        )
+        self.assertEqual(data, 'rue des bas rogers')
+
+    def test_build_low_address(self):
         self.controller.address_dict = [
             {'hnr': '20', 'rep': 'bis', 'name': 'rue ledru-rollin'},
             {'hnr': '24', 'rep': None, 'name': 'rue carnot'}
         ]
-        data = self.controller._Controller__build_address()
+        data = self.controller._Controller__build_low_address()
         self.assertEqual(data[0], '20 bis rue ledru-rollin')
         self.assertEqual(data[1], '24 rue carnot')
+
+    def test_build_upp_address(self):
+        self.controller.address_dict = [
+            {'hnr': '20', 'rep': 'bis', 'name': 'rue ledru-rollin'},
+            {'hnr': '24', 'rep': None, 'name': 'rue carnot'}
+        ]
+        data = self.controller._Controller__build_upp_address()
+        self.assertEqual(data[0], '20 BIS RUE LEDRU-ROLLIN')
+        self.assertEqual(data[1], '24 RUE CARNOT')
+
+    def test_build_cap_address(self):
+        self.controller.address_dict = [
+            {'hnr': '20', 'rep': 'bis', 'name': 'rue ledru-rollin'},
+            {'hnr': '20', 'rep': 'bis', 'name': 'rue des bas rogers'},
+            {'hnr': '24', 'rep': None, 'name': 'rue carnot'}
+        ]
+        data = self.controller._Controller__build_cap_address()
+        self.assertEqual(data[0], '20 Bis Rue Ledru-rollin')
+        self.assertEqual(data[1], '20 Bis Rue des Bas Rogers')
+        self.assertEqual(data[2], '24 Rue Carnot')
+
+
+    def test_check_determiner(self):
+        data = self.controller._Controller__check_determiner('de')
+        self.assertTrue(data)
+        data = self.controller._Controller__check_determiner('chemin')
+        self.assertFalse(data)
+
+    def test_add_name(self):
+        data = self.controller._Controller__add_name(
+            name='un', adr_len=2, data='', counter=1
+        )
+        self.assertEqual(data, 'un ')
+        data = self.controller._Controller__add_name(
+            name='Chemin', adr_len=2, data='', counter=2
+        )
+        self.assertEqual(data, 'Chemin')
+
+    def test_create_output_structure(self):
+        self.controller.column_values = [
+            '20 bis, rue Ledru-Rollin', '24, Rue Carnot'
+        ]
+        self.controller.n_adr_low_list = [
+            '20 bis rue ledru-rollin', '24 rue carnot'
+        ]
+        self.controller.n_adr_upp_list = [
+            '20 BIS RUE LEDRU-ROLLIN', '24 RUE CARNOT'
+        ]
+        self.controller.n_adr_cap_list = [
+            '20 Bis Rue Ledru-rollin', '24 Rue Carnot'
+        ]
+        data = self.controller._Controller__create_output_structure()
+        self.assertEqual(data[1][0], 2)
+        self.assertEqual(data[1][1], '24, Rue Carnot')
+        self.assertEqual(data[1][2], '24 rue carnot')
+        self.assertEqual(data[1][3], '24 RUE CARNOT')
+        self.assertEqual(data[1][4], '24 Rue Carnot')
+
+    
 
 
 
